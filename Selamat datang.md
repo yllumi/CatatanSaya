@@ -7,3 +7,4 @@ Saat Anda siap, hapus catatan ini dan jadikan brankas ini milik Anda sendiri.
 Ini testing catatan untuk disync.
 
 Bisa ya?
+Coba pull dari widget
