@@ -11,10 +11,14 @@
             "id": "47e9a256e9c9dce9",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Selamat datang.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Selamat datang"
             }
           }
         ]
@@ -113,6 +117,7 @@
         "state": {
           "type": "backlink",
           "state": {
+            "file": "Selamat datang.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -131,6 +136,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
+            "file": "Selamat datang.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           },
@@ -144,6 +150,7 @@
         "state": {
           "type": "outline",
           "state": {
+            "file": "Selamat datang.md",
             "followCursor": false,
             "showSearch": false,
             "searchQuery": ""
@@ -168,6 +175,7 @@
   },
   "active": "47e9a256e9c9dce9",
   "lastOpenFiles": [
+    "gitsync.sh",
     "Selamat datang.md"
   ]
 }
