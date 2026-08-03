@@ -1,3 +1,4 @@
+Outline Essai: [[Outline Esai - Redesign Sistematika Halaqah Berbasis Digital-Blended System]]
 ## Latar Belakang
 
 Pemuda Persatuan Islam (Pemuda PERSIS) telah memiliki sistem kaderisasi yang terstruktur dan berjenjang. Proses kaderisasi dimulai melalui kegiatan Ma'ruf sebagai pengukuhan anggota, dilanjutkan dengan pembinaan Halaqah 1 yang terdiri dari 16 pertemuan, kemudian Tafiq 1, Halaqah 2, Tafiq 2, Halaqah 3, hingga Tafiq 3. Setiap jenjang telah dilengkapi dengan kurikulum dan materi pembinaan yang dirancang untuk membentuk pemahaman keislaman, wawasan keorganisasian, serta karakter kader sesuai dengan nilai dan manhaj Persatuan Islam.
