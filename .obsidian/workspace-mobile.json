@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Selamat datang.md",
+                "file": "Artikel - Pengembangan Sistem Pembinaan Kader yang Adaptif, Terukur, dan Berkelanjutan di Pemuda Persis.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Selamat datang"
+              "title": "Artikel - Pengembangan Sistem Pembinaan Kader yang Adaptif, Terukur, dan Berkelanjutan di Pemuda Persis"
             }
           }
         ]
@@ -117,7 +117,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Selamat datang.md",
+            "file": "Artikel - Pengembangan Sistem Pembinaan Kader yang Adaptif, Terukur, dan Berkelanjutan di Pemuda Persis.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -136,7 +136,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "Selamat datang.md",
+            "file": "Artikel - Pengembangan Sistem Pembinaan Kader yang Adaptif, Terukur, dan Berkelanjutan di Pemuda Persis.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           },
@@ -150,7 +150,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "Selamat datang.md",
+            "file": "Artikel - Pengembangan Sistem Pembinaan Kader yang Adaptif, Terukur, dan Berkelanjutan di Pemuda Persis.md",
             "followCursor": false,
             "showSearch": false,
             "searchQuery": ""
@@ -175,7 +175,8 @@
   },
   "active": "47e9a256e9c9dce9",
   "lastOpenFiles": [
-    "gitsync.sh",
-    "Selamat datang.md"
+    "Selamat datang.md",
+    "Artikel - Pengembangan Sistem Pembinaan Kader yang Adaptif, Terukur, dan Berkelanjutan di Pemuda Persis.md",
+    "gitsync.sh"
   ]
 }
