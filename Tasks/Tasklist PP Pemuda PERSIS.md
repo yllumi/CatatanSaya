@@ -1,0 +1,3 @@
+- [ ] List fitur dan data yang sudah ada di AnaOnline
+- [ ] List data yang dibutuhkan dan belum ada di AnaOnline
+- [ ] Buat makalah terkait LMS untuk pembinaan/halaqah
