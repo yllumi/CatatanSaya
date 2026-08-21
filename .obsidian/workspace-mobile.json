@@ -34,9 +34,51 @@
               "icon": "lucide-file",
               "title": "Keyakinan Melahirkan Ketenangan"
             }
+          },
+          {
+            "id": "c7d3e4819d6bac70",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Siap.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Siap"
+            }
+          },
+          {
+            "id": "67e999a27909a2d8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Keyakinan Melahirkan Ketenangan.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Keyakinan Melahirkan Ketenangan"
+            }
+          },
+          {
+            "id": "9347bc3bc2bf7bb1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Keyakinan Melahirkan Ketenangan.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Keyakinan Melahirkan Ketenangan"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -188,9 +230,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "edf501791ee39c0f",
+  "active": "9347bc3bc2bf7bb1",
   "lastOpenFiles": [
+    "Jodoh Jalur Langit.md",
     "Keyakinan Melahirkan Ketenangan.md",
+    "Skill Penting dalam Hidup.md",
+    "Untitled.md",
+    "Siap.md",
     "Bootcamp dengan bahan belajar dari kelas2 CP tapi dengan pendampingan.md",
     "Selamat datang.md",
     "Artikel - Pengembangan Sistem Pembinaan Kader yang Adaptif, Terukur, dan Berkelanjutan di Pemuda Persis.md",
