@@ -1,0 +1,1 @@
+Sebelumnya form data profil anggota di AnaOnline sudah sangat lengkap. Tapi realitanya hanya sedikit anggota yang memperbaharui profil. Maka dibutuhkan cara lain yang dapat menjadi solusi penghimpunan data anggota dan pembaharuan secara berkala.
