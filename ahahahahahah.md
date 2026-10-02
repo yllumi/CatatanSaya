@@ -1,4 +1,0 @@
-Hahahahahahahahahahahhhhhahahhahahahhahahahahhhhhahahahahhhhahahahahahhahahahahahhhahhhaahhahahhahahahahahahahahhahahahhhahahah hari hahahahhahaha
-~~kenapa~~
-**kok bisa
-hahahahhhhhahaa**
