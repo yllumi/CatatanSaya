@@ -169,3 +169,13 @@ Implementasi _Digital-Blended System_ berbasis kecerdasan buatan dalam pembinaan
 
 
 ## Daftar Pustaka
+
+Amien, Shiddiq., dkk. (2023). _Panduan Hidup Berjamaah di Jamiyyah Persatuan Islam_. Bandung: Persis Pers.
+
+Elvandi. (2020). _Sang Pemuda Merancang Kontribusi Mengokohkan Eksistensi_. Bandung: Penerbit Yayasan Muslim Berdaya.
+
+Fried, Jason., & Hansson, David Heinemeier. (2022). _REWORK: Ubahlah Cara Kerjamu Selamanya!_. Jakarta: PT Rene Turos Indonesia.
+
+Pimpinan Pusat Pemuda Persatuan Islam. (n.d.). _Pedoman Aktivitas Jamiyyah Pemuda Persatuan Islam_. Bandung: Pimpinan Pusat Pemuda Persatuan Islam.
+
+Pimpinan Pusat Pemuda Persatuan Islam. (2026). _Laporan Pertanggungjawaban Ketua Umum PP Pemuda Persatuan Islam Periode 2021-2026_. Bandung: Pimpinan Pusat Pemuda Persatuan Islam.
