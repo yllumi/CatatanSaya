@@ -1,0 +1,1410 @@
+{
+  "userId": "be30d421-583c-43a0-9c9f-edd9caa689cb",
+  "isPaidUser": false,
+  "isPlusUser": false,
+  "entitlementToken": "",
+  "entitlementExpiresAt": 0,
+  "plusLicenseKey": "",
+  "openAIApiKey": "",
+  "openAIOrgId": "",
+  "huggingfaceApiKey": "",
+  "cohereApiKey": "",
+  "anthropicApiKey": "",
+  "googleApiKey": "",
+  "openRouterAiApiKey": "",
+  "xaiApiKey": "",
+  "mistralApiKey": "",
+  "deepseekApiKey": "",
+  "siliconflowApiKey": "",
+  "defaultChainType": "llm_chain",
+  "defaultModelKey": "google/gemini-2.5-flash|openrouterai",
+  "contextTurns": 15,
+  "userSystemPrompt": "",
+  "openAIProxyBaseUrl": "",
+  "stream": true,
+  "copilotFolder": "copilot",
+  "copilotRootHistory": [
+    "copilot"
+  ],
+  "upgradedToV8FromLegacy": false,
+  "defaultSaveFolder": "copilot/copilot-conversations",
+  "defaultConversationTag": "copilot-conversation",
+  "autosaveChat": true,
+  "defaultOpenArea": "view",
+  "defaultSendShortcut": "enter",
+  "customPromptsFolder": "copilot/copilot-custom-prompts",
+  "qaExclusions": "copilot",
+  "qaInclusions": "",
+  "chatNoteContextPath": "",
+  "chatNoteContextTags": [],
+  "debug": false,
+  "maxSourceChunks": 30,
+  "enableInlineCitations": true,
+  "groqApiKey": "",
+  "activeModels": [
+    {
+      "name": "copilot-plus-flash",
+      "provider": "copilot-plus",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
+      "plusExclusive": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "google/gemini-2.5-flash",
+      "provider": "openrouterai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gpt-5.5",
+      "provider": "openai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gpt-5.4-mini",
+      "provider": "openai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "core": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "google/gemini-3.5-flash",
+      "provider": "openrouterai",
+      "enabled": true,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision",
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "claude-sonnet-4-6",
+      "provider": "anthropic",
+      "enabled": true,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision",
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gemini-3.5-flash",
+      "provider": "google",
+      "enabled": true,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision",
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gemini-3.1-flash-lite",
+      "provider": "google",
+      "enabled": true,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gemini-2.5-flash",
+      "provider": "google",
+      "enabled": true,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "google/gemini-3.1-pro-preview",
+      "provider": "openrouterai",
+      "enabled": false,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision",
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "google/gemini-2.5-pro",
+      "provider": "openrouterai",
+      "enabled": false,
+      "isBuiltIn": true,
+      "core": false,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "openai/gpt-5.5",
+      "provider": "openrouterai",
+      "enabled": false,
+      "isBuiltIn": true,
+      "core": false,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "openai/gpt-5.4-mini",
+      "provider": "openrouterai",
+      "enabled": false,
+      "isBuiltIn": true,
+      "core": false,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "grok-4.3",
+      "provider": "xai",
+      "enabled": false,
+      "isBuiltIn": true,
+      "core": false,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "x-ai/grok-4.3",
+      "provider": "openrouterai",
+      "enabled": false,
+      "isBuiltIn": true,
+      "core": false,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gpt-4.1",
+      "provider": "openai",
+      "enabled": false,
+      "isBuiltIn": true,
+      "core": false,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gpt-4.1-mini",
+      "provider": "openai",
+      "enabled": false,
+      "isBuiltIn": true,
+      "core": false,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "claude-opus-4-7",
+      "provider": "anthropic",
+      "enabled": false,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision",
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "claude-haiku-4-5",
+      "provider": "anthropic",
+      "enabled": false,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision",
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gemini-3.1-pro-preview",
+      "provider": "google",
+      "enabled": false,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision",
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "gemini-2.5-pro",
+      "provider": "google",
+      "enabled": false,
+      "isBuiltIn": true,
+      "capabilities": [
+        "vision"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "deepseek-chat",
+      "provider": "deepseek",
+      "enabled": false,
+      "isBuiltIn": true,
+      "apiKey": ""
+    },
+    {
+      "name": "deepseek-reasoner",
+      "provider": "deepseek",
+      "enabled": false,
+      "isBuiltIn": true,
+      "capabilities": [
+        "reasoning"
+      ],
+      "apiKey": ""
+    },
+    {
+      "name": "deepseek-ai/DeepSeek-V3",
+      "provider": "siliconflow",
+      "enabled": false,
+      "isBuiltIn": false,
+      "baseUrl": "https://api.siliconflow.com/v1",
+      "apiKey": ""
+    },
+    {
+      "name": "deepseek-ai/DeepSeek-R1",
+      "provider": "siliconflow",
+      "enabled": false,
+      "isBuiltIn": false,
+      "baseUrl": "https://api.siliconflow.com/v1",
+      "capabilities": [
+        "reasoning"
+      ],
+      "apiKey": ""
+    }
+  ],
+  "lexicalSearchRamLimit": 100,
+  "promptUsageTimestamps": {},
+  "promptSortStrategy": "timestamp",
+  "chatHistorySortStrategy": "recent",
+  "projectsFolder": "copilot/projects",
+  "defaultConversationNoteName": "{$topic}@{$date}_{$time}",
+  "inlineEditCommands": [],
+  "projectList": [],
+  "lastDismissedVersion": null,
+  "lastShownStartupVersion": null,
+  "passMarkdownImages": true,
+  "enableAutonomousAgent": true,
+  "enableCustomPromptTemplating": true,
+  "enableSelfHostMode": false,
+  "enableMiyo": false,
+  "enableMiyoSearchSkill": false,
+  "miyoSearchAll": false,
+  "miyoExtraSearchFolders": [],
+  "relevantNotesLiveUpdate": true,
+  "miyoServerUrl": "",
+  "selfHostSearchProvider": "firecrawl",
+  "firecrawlApiKey": "",
+  "perplexityApiKey": "",
+  "parallelApiKey": "",
+  "exaApiKey": "",
+  "supadataApiKey": "",
+  "docProcessorBackend": "plus",
+  "enableLexicalBoosts": true,
+  "suggestedDefaultCommands": false,
+  "autonomousAgentEnabledToolIds": [
+    "localSearch",
+    "readNote",
+    "webSearch",
+    "pomodoro",
+    "youtubeTranscription",
+    "writeFile",
+    "editFile",
+    "updateMemory"
+  ],
+  "reasoningEffort": "low",
+  "verbosity": "medium",
+  "memoryFolderName": "copilot/memory",
+  "enableRecentConversations": true,
+  "maxRecentConversations": 30,
+  "enableSavedMemory": true,
+  "quickCommandModelKey": "db68afdc-162e-4adb-8cc2-61312d790804",
+  "quickCommandIncludeNoteContext": true,
+  "autoAcceptEdits": false,
+  "diffViewMode": "split",
+  "userSystemPromptsFolder": "copilot/system-prompts",
+  "defaultSystemPromptTitle": "",
+  "autoCompactThreshold": 128000,
+  "convertedDocOutputFolder": "",
+  "agentMode": {
+    "byok": {},
+    "activeBackend": "opencode",
+    "backends": {
+      "opencode": {
+        "defaultMode": "auto"
+      }
+    },
+    "debugFullFrames": true,
+    "notificationSound": true,
+    "notificationSoundId": "piano",
+    "welcomeDismissed": false,
+    "skills": {
+      "folder": "copilot/skills",
+      "builtinPreferences": {
+        "copilot-read-pdf": {
+          "disabled": true
+        }
+      }
+    },
+    "deviceProfiles": {
+      "1f103e7a-9aca-4f1a-8d26-b1f5c7d4aa05": {
+        "opencode": {
+          "binaryPath": "/home/yllumi/.obsidian-copilot/opencode/2.0.22/bin/opencode",
+          "binaryVersion": "2.0.22",
+          "binarySource": "managed",
+          "probeSessionId": "ses_ebf9244a4ffeWtXb238y53oD85"
+        }
+      }
+    }
+  },
+  "providers": {
+    "415b3a8a-4687-4caf-8f4b-f50d0feffa5d": {
+      "providerType": "anthropic",
+      "displayName": "Claude",
+      "origin": {
+        "kind": "agent",
+        "agentType": "claude"
+      },
+      "requiresApiKey": false,
+      "providerId": "415b3a8a-4687-4caf-8f4b-f50d0feffa5d",
+      "addedAt": 1792082043275,
+      "apiKeyKeychainId": null
+    },
+    "417bc47e-75ad-4fb4-9f54-2dbe86ddedce": {
+      "providerType": "openai-compatible",
+      "displayName": "DeepSeek",
+      "baseUrl": "https://api.deepseek.com",
+      "enableCors": false,
+      "requiresApiKey": true,
+      "origin": {
+        "kind": "byok",
+        "catalogProviderId": "deepseek"
+      },
+      "providerId": "417bc47e-75ad-4fb4-9f54-2dbe86ddedce",
+      "addedAt": 1792082153753,
+      "apiKeyKeychainId": "copilot-v45617dbb-provider-417bc47e-75ad-4fb4-9f54-2dbe86ddedce"
+    },
+    "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d": {
+      "providerType": "openai-compatible",
+      "displayName": "opencode",
+      "origin": {
+        "kind": "agent",
+        "agentType": "opencode"
+      },
+      "requiresApiKey": false,
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "addedAt": 1792082295716,
+      "apiKeyKeychainId": null
+    }
+  },
+  "configuredModels": [
+    {
+      "providerId": "415b3a8a-4687-4caf-8f4b-f50d0feffa5d",
+      "info": {
+        "id": "default",
+        "displayName": "Default (recommended)",
+        "description": "Use the default model (currently Opus 5.5) · $4/$20 per Mtok"
+      },
+      "configuredModelId": "2a75d8d5-b692-4840-a290-5149de0c10d6",
+      "configuredAt": 1792082044021
+    },
+    {
+      "providerId": "415b3a8a-4687-4caf-8f4b-f50d0feffa5d",
+      "info": {
+        "id": "opus",
+        "displayName": "Opus",
+        "description": "Opus 5.5 · Best for everyday, complex tasks · $4/$20 per Mtok"
+      },
+      "configuredModelId": "96971ff1-3dac-4ef5-bfe3-0f4c00e32fc3",
+      "configuredAt": 1792082044023
+    },
+    {
+      "providerId": "415b3a8a-4687-4caf-8f4b-f50d0feffa5d",
+      "info": {
+        "id": "claude-fable-5-1[1m]",
+        "displayName": "Fable",
+        "description": "Fable 5.1 · Most capable for your hardest and longest-running tasks · $10/$50 per Mtok"
+      },
+      "configuredModelId": "420aee68-3db9-4241-a52b-b871be932cda",
+      "configuredAt": 1792082044024
+    },
+    {
+      "providerId": "415b3a8a-4687-4caf-8f4b-f50d0feffa5d",
+      "info": {
+        "id": "sonnet",
+        "displayName": "Sonnet",
+        "description": "Sonnet 5.5 · Efficient for routine tasks · $2/$10 per Mtok"
+      },
+      "configuredModelId": "db20520c-721d-47a7-9ad2-ee4bf8d43f5e",
+      "configuredAt": 1792082044025
+    },
+    {
+      "providerId": "415b3a8a-4687-4caf-8f4b-f50d0feffa5d",
+      "info": {
+        "id": "haiku",
+        "displayName": "Haiku",
+        "description": "Haiku 4.5 · Fastest for quick answers · $1/$5 per Mtok"
+      },
+      "configuredModelId": "4195e7e7-e048-4b6d-871f-32fbe8030e1d",
+      "configuredAt": 1792082044026
+    },
+    {
+      "configuredModelId": "db68afdc-162e-4adb-8cc2-61312d790804",
+      "providerId": "417bc47e-75ad-4fb4-9f54-2dbe86ddedce",
+      "info": {
+        "id": "deepseek-flash",
+        "displayName": "DeepSeek V4.1 Flash",
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1000000,
+          "output": 393216
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-09-10",
+        "cost": {
+          "input": 0.15,
+          "output": 0.6,
+          "cacheRead": 0.003
+        }
+      },
+      "configuredAt": 1792082153767
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/big-pickle",
+        "displayName": "opencode/Big Pickle"
+      },
+      "configuredModelId": "2b98a10a-e82e-42cd-8ab9-96d7884eb0a5",
+      "configuredAt": 1792082295733
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/cat-jam-free",
+        "displayName": "opencode/Cat Jam Free"
+      },
+      "configuredModelId": "56020603-5d0e-464d-8f12-f68bb6cd88db",
+      "configuredAt": 1792082295734
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/claude-fable-5-1",
+        "displayName": "opencode/Claude Fable 5.1"
+      },
+      "configuredModelId": "fa774479-984b-42cc-a97f-7d947829237d",
+      "configuredAt": 1792082295737
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/claude-haiku-4-5",
+        "displayName": "opencode/Claude Haiku 4.5"
+      },
+      "configuredModelId": "e885db81-4f20-45da-a773-e37097448451",
+      "configuredAt": 1792082295737
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/claude-haiku-5-5",
+        "displayName": "opencode/Claude Haiku 5.5"
+      },
+      "configuredModelId": "94a508f7-5cf3-47dc-9de8-e484665b5415",
+      "configuredAt": 1792082295738
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/claude-opus-5-5",
+        "displayName": "opencode/Claude Opus 5.5"
+      },
+      "configuredModelId": "9030d0d3-b9eb-4887-be7d-4f4996a8de6b",
+      "configuredAt": 1792082295740
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/claude-sonnet-5",
+        "displayName": "opencode/Claude Sonnet 5"
+      },
+      "configuredModelId": "5d10e344-8404-411e-bfa6-f12595836ad6",
+      "configuredAt": 1792082295742
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/claude-sonnet-5-5",
+        "displayName": "opencode/Claude Sonnet 5.5"
+      },
+      "configuredModelId": "a470b6d4-73c1-4698-975f-f72e47c10fc3",
+      "configuredAt": 1792082295743
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/deepseek-v4-pro",
+        "displayName": "opencode/DeepSeek V4 Pro"
+      },
+      "configuredModelId": "c54d3837-8b9f-4ccb-a0d9-77a18bf11d76",
+      "configuredAt": 1792082295744
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/deepseek-v4.1-flash",
+        "displayName": "opencode/DeepSeek V4.1 Flash"
+      },
+      "configuredModelId": "9f35ad01-dfef-4d75-8370-13247c51152a",
+      "configuredAt": 1792082295745
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/deepseek-v4.1-flash-free",
+        "displayName": "opencode/DeepSeek V4.1 Flash Free"
+      },
+      "configuredModelId": "dcbb735c-dc01-4e00-8d31-0d94c8d4df5f",
+      "configuredAt": 1792082295745
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/gemini-3.1-pro",
+        "displayName": "opencode/Gemini 3.1 Pro Preview"
+      },
+      "configuredModelId": "bab2ed9b-7890-4d0d-a3bb-100f3fdadae3",
+      "configuredAt": 1792082295746
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/gemini-3.5-flash-lite",
+        "displayName": "opencode/Gemini 3.5 Flash Lite"
+      },
+      "configuredModelId": "2bcc28e6-fb90-4aaf-978d-6d58f2ccad36",
+      "configuredAt": 1792082295747
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/gemini-3.8-flash",
+        "displayName": "opencode/Gemini 3.8 Flash"
+      },
+      "configuredModelId": "244d3b00-495e-4eaf-8920-5e305490c850",
+      "configuredAt": 1792082295748
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/gemini-4-argon",
+        "displayName": "opencode/Gemini 4 Argon"
+      },
+      "configuredModelId": "b47cc790-257d-4f94-926a-59ec1c8b3f10",
+      "configuredAt": 1792082295748
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/glm-5.3",
+        "displayName": "opencode/GLM-5.3"
+      },
+      "configuredModelId": "1f244aa1-168e-43ce-967c-aee5778dc51c",
+      "configuredAt": 1792082295750
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/glm-5.3-flash",
+        "displayName": "opencode/GLM-5.3-Flash"
+      },
+      "configuredModelId": "327e8ed4-132e-488c-9c69-2d04c02d930d",
+      "configuredAt": 1792082295750
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/gpt-5.3-codex",
+        "displayName": "opencode/GPT-5.3 Codex"
+      },
+      "configuredModelId": "97cb344e-b9b2-4f5e-872b-90fe59fef591",
+      "configuredAt": 1792082295755
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/gpt-5.3-codex-spark",
+        "displayName": "opencode/GPT-5.3 Codex Spark"
+      },
+      "configuredModelId": "b6c80407-274a-469b-b0cd-46cf7670658a",
+      "configuredAt": 1792082295755
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/gpt-5.4-mini",
+        "displayName": "opencode/GPT-5.4 Mini"
+      },
+      "configuredModelId": "fec35a2f-8288-4f81-bdbc-7968ea1b16e3",
+      "configuredAt": 1792082295756
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/gpt-5.4-nano",
+        "displayName": "opencode/GPT-5.4 Nano"
+      },
+      "configuredModelId": "fc239c40-f1c7-4929-ac16-dac64d793dd4",
+      "configuredAt": 1792082295757
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/gpt-5.5",
+        "displayName": "opencode/GPT-5.5"
+      },
+      "configuredModelId": "7e776373-0bd7-41e9-bb66-02d453081564",
+      "configuredAt": 1792082295757
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/gpt-5.5-pro",
+        "displayName": "opencode/GPT-5.5 Pro"
+      },
+      "configuredModelId": "a690cfea-c918-4bb9-8005-abdd799d70c1",
+      "configuredAt": 1792082295758
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/gpt-5.6-terra",
+        "displayName": "opencode/GPT-5.6 Terra"
+      },
+      "configuredModelId": "debdf3b7-7005-4d5d-a551-bf81ae25cd7e",
+      "configuredAt": 1792082295759
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/gpt-6-astra",
+        "displayName": "opencode/GPT-6 Astra"
+      },
+      "configuredModelId": "881c9bdb-1afd-49b8-98e9-d83981af29ef",
+      "configuredAt": 1792082295759
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/gpt-6-luna",
+        "displayName": "opencode/GPT-6 Luna"
+      },
+      "configuredModelId": "8cff1cb6-0e67-44c0-8bd5-e94b12f46d65",
+      "configuredAt": 1792082295760
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/gpt-6-sol",
+        "displayName": "opencode/GPT-6 Sol"
+      },
+      "configuredModelId": "bdb7c609-7d1b-4230-b1e6-2ddf9ffdde61",
+      "configuredAt": 1792082295761
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/gpt-6.1-sol",
+        "displayName": "opencode/GPT-6.1 Sol"
+      },
+      "configuredModelId": "91407b13-4987-432a-bc43-c99a8d9545d5",
+      "configuredAt": 1792082295761
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/grok-4.7",
+        "displayName": "opencode/Grok 4.7"
+      },
+      "configuredModelId": "3233cf82-76c0-4d68-9746-d5e6d9de86a7",
+      "configuredAt": 1792082295762
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/grok-build-0.1",
+        "displayName": "opencode/Grok Build 0.1"
+      },
+      "configuredModelId": "b95a0d1c-ec54-41e5-9d7c-69bed9443bf5",
+      "configuredAt": 1792082295762
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/kimi-k2.7-code",
+        "displayName": "opencode/Kimi K2.7 Code"
+      },
+      "configuredModelId": "e8dd8cba-7e3f-4958-95cb-122597e5ca2e",
+      "configuredAt": 1792082295764
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/kimi-k3",
+        "displayName": "opencode/Kimi K3"
+      },
+      "configuredModelId": "169ab39f-6ecf-4255-8590-77c5d1cde086",
+      "configuredAt": 1792082295764
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/longcat-2.5-preview-free",
+        "displayName": "opencode/LongCat 2.5 Preview Free"
+      },
+      "configuredModelId": "6114116e-3408-4245-a41f-fc33285adb06",
+      "configuredAt": 1792082295765
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/mimo-v2.6-flash-free",
+        "displayName": "opencode/MiMo-V2.6-Flash Free"
+      },
+      "configuredModelId": "0a777728-1057-4d70-adb5-1be1dc716543",
+      "configuredAt": 1792082295765
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/minimax-m3",
+        "displayName": "opencode/MiniMax-M3"
+      },
+      "configuredModelId": "a038fd0c-44a8-42c5-b6f5-a06a349f9f09",
+      "configuredAt": 1792082295766
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/mistral-large-4",
+        "displayName": "opencode/Mistral Large 4"
+      },
+      "configuredModelId": "694907a4-8071-4301-bab3-35c8da816611",
+      "configuredAt": 1792082295767
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/muse-spark-1.3",
+        "displayName": "opencode/Muse Spark 1.3"
+      },
+      "configuredModelId": "1c687dae-733a-4343-82db-1e45a3e6e9b3",
+      "configuredAt": 1792082295767
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/muse-spark-1.3-contributor-free",
+        "displayName": "opencode/Muse Spark 1.3 Free"
+      },
+      "configuredModelId": "92da0e81-079f-462a-b7d6-ef2ad0359d40",
+      "configuredAt": 1792082295768
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/nemotron-3-ultra-free",
+        "displayName": "opencode/Nemotron 3 Ultra Free"
+      },
+      "configuredModelId": "b7cb8435-12c0-402a-98e6-5dd17fa09ba0",
+      "configuredAt": 1792082295768
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/nemotron-3.5-lightning-free",
+        "displayName": "opencode/Nemotron 3.5 Lightning Free"
+      },
+      "configuredModelId": "7388f9eb-4fc7-47aa-b0ce-5caa801c3f13",
+      "configuredAt": 1792082295768
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/nemotron-3.5-super-vl-free",
+        "displayName": "opencode/Nemotron 3.5 Super VL Free"
+      },
+      "configuredModelId": "4b6917c0-8668-43ec-b052-7b1a9b45269e",
+      "configuredAt": 1792082295769
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/qwen3.6-plus",
+        "displayName": "opencode/Qwen3.6 Plus"
+      },
+      "configuredModelId": "28e67dfa-dc3e-4b84-abe9-63a97dae646f",
+      "configuredAt": 1792082295770
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/qwen3.8-flash",
+        "displayName": "opencode/Qwen3.8 Flash"
+      },
+      "configuredModelId": "4a308d3e-d1a3-49f0-84c2-d9a4f91cc8a4",
+      "configuredAt": 1792082295770
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/qwen3.8-max",
+        "displayName": "opencode/Qwen3.8 Max"
+      },
+      "configuredModelId": "959ea57b-5185-4c96-baaf-ccef18693295",
+      "configuredAt": 1792082295770
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/space-bunny-free",
+        "displayName": "opencode/Space Bunny Free"
+      },
+      "configuredModelId": "b7346293-01b9-4e14-a54e-97c930540b9b",
+      "configuredAt": 1792082295771
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/step-5-preview-free",
+        "displayName": "opencode/Step 5 Preview Free"
+      },
+      "configuredModelId": "d3e2d2cb-073b-4278-bc52-de33f3242383",
+      "configuredAt": 1792082295771
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/cat-jam-free",
+        "displayName": "opencode-go/Cat Jam Free"
+      },
+      "configuredModelId": "ac40f1c4-3ddd-4018-9e8b-5fccaf4766b9",
+      "configuredAt": 1792082295771
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/claude-haiku-5-5",
+        "displayName": "opencode-go/Claude Haiku 5.5"
+      },
+      "configuredModelId": "3828790a-15fc-4fc3-9cb9-c1c54a9bce78",
+      "configuredAt": 1792082295772
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/deepseek-v4-pro",
+        "displayName": "opencode-go/DeepSeek V4 Pro (New)"
+      },
+      "configuredModelId": "434df49a-5a41-4dd1-b462-d5506bd2c371",
+      "configuredAt": 1792082295772
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/deepseek-v4.1-flash",
+        "displayName": "opencode-go/DeepSeek V4.1 Flash"
+      },
+      "configuredModelId": "3c8f4403-adef-44e6-91e3-9dac709e2f86",
+      "configuredAt": 1792082295773
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/gemini-4-argon-contributor",
+        "displayName": "opencode-go/Gemini 4 Argon Contributor"
+      },
+      "configuredModelId": "fbe05f86-4cf7-4bb0-86ec-0a7361a9059e",
+      "configuredAt": 1792082295773
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/glm-5.2",
+        "displayName": "opencode-go/GLM-5.2"
+      },
+      "configuredModelId": "3390d96b-bd84-434c-b410-7f9d5ced4155",
+      "configuredAt": 1792082295774
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/glm-5.3",
+        "displayName": "opencode-go/GLM-5.3"
+      },
+      "configuredModelId": "d2c6c7df-ba7b-4b06-a7da-f9dbd190fed5",
+      "configuredAt": 1792082295774
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/glm-5.3-flash",
+        "displayName": "opencode-go/GLM-5.3-Flash"
+      },
+      "configuredModelId": "737c1454-07cc-4635-a29c-6912176c0683",
+      "configuredAt": 1792082295774
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/gpt-5.6-luna",
+        "displayName": "opencode-go/GPT-5.6 Luna"
+      },
+      "configuredModelId": "5eded66a-9cd7-4c74-b077-657b5bc5c6d6",
+      "configuredAt": 1792082295775
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/gpt-6-luna",
+        "displayName": "opencode-go/GPT-6 Luna"
+      },
+      "configuredModelId": "de00244b-06d0-4fa7-be6f-b20e219f36d5",
+      "configuredAt": 1792082295775
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/grok-4.7",
+        "displayName": "opencode-go/Grok 4.7"
+      },
+      "configuredModelId": "1b147849-90a5-42bb-a50f-493f6468615f",
+      "configuredAt": 1792082295776
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/hy3",
+        "displayName": "opencode-go/Hy3"
+      },
+      "configuredModelId": "46a008ef-151b-4c8b-a884-7b6dde13e30f",
+      "configuredAt": 1792082295777
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/hy4-preview",
+        "displayName": "opencode-go/Hy4 preview"
+      },
+      "configuredModelId": "cb4f635c-f05e-4e08-a8b4-f6a36d84c764",
+      "configuredAt": 1792082295778
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/kimi-k2.7-code",
+        "displayName": "opencode-go/Kimi K2.7 Code"
+      },
+      "configuredModelId": "59af063f-ec35-49a3-b9ba-4e2703b6bad3",
+      "configuredAt": 1792082295778
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/kimi-k3",
+        "displayName": "opencode-go/Kimi K3"
+      },
+      "configuredModelId": "1f6ba658-9a45-4ea8-8a72-fa3c9357b4c8",
+      "configuredAt": 1792082295779
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/longcat-2.5-preview-free",
+        "displayName": "opencode-go/LongCat 2.5 Preview Free"
+      },
+      "configuredModelId": "64ec9096-3f43-451d-840c-d38d6036696d",
+      "configuredAt": 1792082295779
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/longcat-2.0",
+        "displayName": "opencode-go/LongCat-2.0"
+      },
+      "configuredModelId": "0a8898f5-2e57-4272-a3f8-5c27ae69e701",
+      "configuredAt": 1792082295779
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/mimo-v2.5",
+        "displayName": "opencode-go/MiMo V2.5"
+      },
+      "configuredModelId": "1d96a8c8-826c-4f2a-a1b0-7605d81f3818",
+      "configuredAt": 1792082295779
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/mimo-v2.5-pro",
+        "displayName": "opencode-go/MiMo V2.5 Pro"
+      },
+      "configuredModelId": "77fd7ffe-cb59-478f-aa31-66a22a1d19e0",
+      "configuredAt": 1792082295780
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/mimo-v2.6-flash",
+        "displayName": "opencode-go/MiMo-V2.6-Flash"
+      },
+      "configuredModelId": "05712c39-3d61-4aef-b8f8-855d8197a66d",
+      "configuredAt": 1792082295780
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/mimo-v2.6-pro",
+        "displayName": "opencode-go/MiMo-V2.6-Pro"
+      },
+      "configuredModelId": "46977c0e-5e16-44b8-9cf8-8e7cfc08fb4c",
+      "configuredAt": 1792082295780
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/minimax-m3",
+        "displayName": "opencode-go/MiniMax-M3"
+      },
+      "configuredModelId": "a933512f-bdfa-4fbe-9c8f-315b8cc63abe",
+      "configuredAt": 1792082295781
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/muse-spark-1.2-contributor",
+        "displayName": "opencode-go/Muse Spark 1.2 Contributor"
+      },
+      "configuredModelId": "5316b4c2-7ec0-468f-becd-ab4138a58038",
+      "configuredAt": 1792082295781
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/muse-spark-1.3-contributor",
+        "displayName": "opencode-go/Muse Spark 1.3 Contributor"
+      },
+      "configuredModelId": "445dcf65-7404-48a0-8ba1-fc4362172af4",
+      "configuredAt": 1792082295781
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/qwen3.7-plus",
+        "displayName": "opencode-go/Qwen3.7 Plus"
+      },
+      "configuredModelId": "de26e3ba-b9a6-4aa2-86de-3963b6d27636",
+      "configuredAt": 1792082295782
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/qwen3.8-flash",
+        "displayName": "opencode-go/Qwen3.8 Flash"
+      },
+      "configuredModelId": "b2a2aacd-500c-41a8-9986-654e3d1a60e4",
+      "configuredAt": 1792082295782
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/qwen3.8-max",
+        "displayName": "opencode-go/Qwen3.8 Max"
+      },
+      "configuredModelId": "62ff23fe-7b3a-446b-8ab0-703990e07ab7",
+      "configuredAt": 1792082295782
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/space-bunny",
+        "displayName": "opencode-go/Space Bunny"
+      },
+      "configuredModelId": "c68b7c65-9c29-48a0-a253-dcbdb3c6222c",
+      "configuredAt": 1792082295783
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/step-5-preview-free",
+        "displayName": "opencode-go/Step 5 Preview Free"
+      },
+      "configuredModelId": "c6331919-e192-42e4-997e-52eba22dc041",
+      "configuredAt": 1792082295783
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "ollama/gemma3:latest",
+        "displayName": "ollama/gemma3:latest"
+      },
+      "configuredModelId": "726bb246-4944-43c0-88d1-71eed531be87",
+      "configuredAt": 1792082297422
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "ollama/phi3:mini",
+        "displayName": "ollama/phi3:mini"
+      },
+      "configuredModelId": "dda04b50-8a70-4ce4-bb49-f459c3cb2395",
+      "configuredAt": 1792082297425
+    }
+  ],
+  "backends": {
+    "claude": {
+      "enabledModels": [
+        "2a75d8d5-b692-4840-a290-5149de0c10d6",
+        "96971ff1-3dac-4ef5-bfe3-0f4c00e32fc3",
+        "420aee68-3db9-4241-a52b-b871be932cda",
+        "db20520c-721d-47a7-9ad2-ee4bf8d43f5e",
+        "4195e7e7-e048-4b6d-871f-32fbe8030e1d"
+      ]
+    },
+    "chat": {
+      "enabledModels": [
+        "db68afdc-162e-4adb-8cc2-61312d790804"
+      ]
+    },
+    "opencode": {
+      "enabledModels": [
+        "db68afdc-162e-4adb-8cc2-61312d790804",
+        "2b98a10a-e82e-42cd-8ab9-96d7884eb0a5",
+        "56020603-5d0e-464d-8f12-f68bb6cd88db"
+      ]
+    }
+  },
+  "copilotPlusCatalog": {
+    "models": [
+      {
+        "id": "copilot-plus-flash",
+        "displayName": "Copilot Plus Flash",
+        "description": "The default model: fastest responses and the most quota.",
+        "toolCall": true,
+        "reasoning": true,
+        "reasoningEfforts": [],
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1048576
+        }
+      },
+      {
+        "id": "glm-5.2",
+        "displayName": "GLM-5.2",
+        "description": "A frontier open-weight model.",
+        "toolCall": true,
+        "reasoning": true,
+        "reasoningEfforts": [
+          "none",
+          "high"
+        ],
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1048576
+        }
+      },
+      {
+        "id": "glm-5.3-flash",
+        "displayName": "GLM-5.3-Flash",
+        "description": "Fast, cost-efficient coding and long-horizon agent tasks.",
+        "toolCall": true,
+        "reasoning": true,
+        "reasoningEfforts": [],
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1048576
+        }
+      },
+      {
+        "id": "deepseek-v4-pro",
+        "displayName": "DeepSeek V4 Pro",
+        "description": "A top-tier model for the hardest reasoning and agentic tasks.",
+        "toolCall": true,
+        "reasoning": true,
+        "reasoningEfforts": [],
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1048576
+        }
+      },
+      {
+        "id": "deepseek-v4-flash-0731",
+        "displayName": "DeepSeek V4 Flash 0731",
+        "description": "The July 2026 DeepSeek V4 Flash snapshot: fast, cheap, and broadly capable.",
+        "toolCall": true,
+        "reasoning": true,
+        "reasoningEfforts": [
+          "none",
+          "high"
+        ],
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1048576
+        }
+      },
+      {
+        "id": "deepseek-v4.1-flash",
+        "displayName": "DeepSeek V4.1 Flash",
+        "description": "Fast multimodal reasoning for coding and agentic tasks.",
+        "toolCall": true,
+        "reasoning": true,
+        "reasoningEfforts": [],
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1048576
+        }
+      },
+      {
+        "id": "mimo-v2.6-flash",
+        "displayName": "MiMo V2.6 Flash",
+        "description": "Cost-effective model for everyday use.",
+        "toolCall": true,
+        "reasoning": true,
+        "reasoningEfforts": [],
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1048576
+        }
+      },
+      {
+        "id": "minimax-m3",
+        "displayName": "MiniMax M3",
+        "description": "Long-context model for coding and agentic tasks.",
+        "toolCall": true,
+        "reasoning": true,
+        "reasoningEfforts": [],
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 524288
+        }
+      }
+    ],
+    "defaultEnabledIds": [
+      "copilot-plus-flash",
+      "glm-5.2",
+      "glm-5.3-flash",
+      "deepseek-v4-pro",
+      "deepseek-v4.1-flash",
+      "minimax-m3"
+    ]
+  },
+  "miyoConnectionMode": "local",
+  "_keychainVaultId": "45617dbb",
+  "settingsVersion": 14
+}

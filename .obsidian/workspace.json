@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "dae067b36e96e2b3",
+        "id": "8a5be15362b5a3bc",
         "type": "tabs",
         "children": [
           {
-            "id": "bb5e600291dece1a",
+            "id": "78c296f3e755867a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pemuda/Makalah - Redesain Sistematika Halaqah Berbasis Digital-Blended System.md",
+                "file": "Buku How to Draw Chibi ala Honhon/Bab 2 - Wajah & Variasi Ekspresi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Makalah - Redesain Sistematika Halaqah Berbasis Digital-Blended System"
+              "title": "Bab 2 - Wajah & Variasi Ekspresi"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pemuda/Makalah - Redesain Sistematika Halaqah Berbasis Digital-Blended System.md",
+                "file": "Buku How to Draw Chibi ala Honhon/Bab 2 - Wajah & Variasi Ekspresi.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,12 +118,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Selamat datang.md",
+                "file": "Buku How to Draw Chibi ala Honhon/Bab 2 - Wajah & Variasi Ekspresi.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Tautan Keluar"
+              "title": "Outgoing links"
             }
           },
           {
@@ -138,7 +138,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "Tag"
+              "title": "Tags"
             }
           },
           {
@@ -152,7 +152,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-archive",
-              "title": "Semua properti"
+              "title": "All properties"
             }
           },
           {
@@ -161,21 +161,31 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Selamat datang.md",
+                "file": "Buku How to Draw Chibi ala Honhon/Bab 2 - Wajah & Variasi Ekspresi.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Kerangka"
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "dc9e00eee7d18c9f",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-agent-chat-view",
+              "state": {},
+              "icon": "copilot-agent",
+              "title": "Copilot Agent"
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 476.2890625
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -185,40 +195,50 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "copilot:Open Copilot Agent Chat": false
     }
   },
-  "active": "bb5e600291dece1a",
+  "active": "dc9e00eee7d18c9f",
   "lastOpenFiles": [
-    "Pasted image 20261002210703.png",
-    "Pemuda/Baseline Bidang Administrasi Pemuda Persis.md",
-    "Pemuda/Program Administrasi Pemuda Persis.md",
+    "Buku How to Draw Chibi ala Honhon/BAB 1 - Mengenal Style Chibi Diri Sendiri.md",
+    "Buku How to Draw Chibi ala Honhon/Bab 2 - Wajah & Variasi Ekspresi.md",
+    "Buku How to Draw Chibi ala Honhon/Bab 3 - Gestur, Pose & Tangan Sederhana.md",
+    "Buku How to Draw Chibi ala Honhon/Bab 6 - Sentuhan Akhir & Tips Bonus.md",
+    "Buku How to Draw Chibi ala Honhon/Bab 5 - Teknik Pewarnaan.md",
+    "Buku How to Draw Chibi ala Honhon/Bab 4 - Rambut, Hijab & Outfit.md",
+    "Buku How to Draw Chibi ala Honhon/Outline.md",
+    "Siap.md",
     "Untitled.canvas",
-    "Pemuda/Makalah - Redesain Sistematika Halaqah Berbasis Digital-Blended System.md",
-    "Redesain Sistematika Halaqah Berbasis Digital-Blended System.md",
-    "Analisis Backup Docker Volume.md",
-    "Domain Aplikasi Sollubiz.md",
-    "Training/Agentic AI for PT Sofco Graha.md",
-    "Pemuda/Story Sistem AnaOnline Resource Planning.md",
-    "Training",
-    "Pemuda/Strategi Menghimpun Data Anggota Pemuda.md",
-    "Pemuda/Digitalisasi Iuran Anggota dan Pemutakhiran Data berbasis Aplikasi Mobile.md",
-    "Coretan - Pengembangan Sistem Pembinaan Kader yang Adaptif, Terukur, dan Berkelanjutan di Pemuda Persis.md",
-    "Aplikasi Perencanaan Kegiatan Unit.md",
-    "Tasks/Tasklist PP Pemuda PERSIS.md",
-    "Tasks/Tasklist Pesantrenku.md",
-    "Tasks/Tasklist CODEPOLITAN.md",
-    "Spek Sistem Distribusi Buku Bantuan Pusbuk.md",
-    "Skill Penting dalam Hidup.md",
-    "Pemuda",
-    "Bootcamp dengan bahan belajar dari kelas2 CP tapi dengan pendampingan.md",
-    "Tasks",
-    "gitsync.sh",
-    "sync.sh",
-    "Tanpa judul.md",
-    "Tanpa judul.base",
-    "Tanpa judul 1.base",
-    "Tanpa judul.canvas",
-    "2026-08-03.md"
+    "copilot/copilot-conversations/agent__Kembangkan_tulisan_dari_setiap_subbab_pada_dokumen_ini_dengan_bahasa@20261015_234213.md",
+    "copilot/copilot-conversations",
+    "copilot/projects/Buku How to Draw Chibi/project.md",
+    "copilot/projects/Buku How to Draw Chibi",
+    "copilot/projects",
+    "Pasted image 20261002210703.png",
+    "copilot/skills/copilot-web-fetch/SKILL.md",
+    "copilot/skills/copilot-web-fetch/web-fetch.ps1",
+    "copilot/skills/copilot-web-fetch/web-fetch.cmd",
+    "copilot/skills/copilot-web-fetch/web-fetch.sh",
+    "copilot/skills/copilot-web-fetch",
+    "copilot/skills/copilot-web-search/SKILL.md",
+    "copilot/skills/copilot-web-search/web-search.ps1",
+    "copilot/skills/copilot-web-search/web-search.cmd",
+    "copilot/skills/copilot-web-search/web-search.sh",
+    "copilot/skills/obsidian-cli/SKILL.md",
+    "copilot/skills/json-canvas/SKILL.md",
+    "copilot/skills/json-canvas/references/EXAMPLES.md",
+    "copilot/skills/obsidian-bases/SKILL.md",
+    "copilot/skills/obsidian-bases/references/EXAMPLES.md",
+    "copilot/skills/obsidian-bases/references/FUNCTIONS_REFERENCE.md",
+    "copilot/skills/obsidian-markdown/SKILL.md",
+    "copilot/skills/obsidian-markdown/references/PROPERTIES.md",
+    "copilot/skills/obsidian-markdown/references/EMBEDS.md",
+    "copilot/skills/obsidian-markdown/references/CALLOUTS.md",
+    "copilot/skills/openartifacts-publish/SKILL.md",
+    "copilot/skills/openartifacts-publish/themes/research-memo.md",
+    "copilot/skills/copilot-fetch-x/SKILL.md",
+    "copilot/skills/copilot-youtube-transcript/SKILL.md",
+    "Tanpa judul.canvas"
   ]
 }
