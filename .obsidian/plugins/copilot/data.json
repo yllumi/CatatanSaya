@@ -317,7 +317,7 @@
   "inlineEditCommands": [],
   "projectList": [],
   "lastDismissedVersion": null,
-  "lastShownStartupVersion": null,
+  "lastShownStartupVersion": "4.0.15",
   "passMarkdownImages": true,
   "enableAutonomousAgent": true,
   "enableCustomPromptTemplating": true,
@@ -355,7 +355,7 @@
   "enableSavedMemory": true,
   "quickCommandModelKey": "db68afdc-162e-4adb-8cc2-61312d790804",
   "quickCommandIncludeNoteContext": true,
-  "autoAcceptEdits": false,
+  "autoAcceptEdits": true,
   "diffViewMode": "split",
   "userSystemPromptsFolder": "copilot/system-prompts",
   "defaultSystemPromptTitle": "",
@@ -482,36 +482,6 @@
       },
       "configuredModelId": "4195e7e7-e048-4b6d-871f-32fbe8030e1d",
       "configuredAt": 1792082044026
-    },
-    {
-      "configuredModelId": "db68afdc-162e-4adb-8cc2-61312d790804",
-      "providerId": "417bc47e-75ad-4fb4-9f54-2dbe86ddedce",
-      "info": {
-        "id": "deepseek-flash",
-        "displayName": "DeepSeek V4.1 Flash",
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "limits": {
-          "context": 1000000,
-          "output": 393216
-        },
-        "reasoning": true,
-        "toolCall": true,
-        "releaseDate": "2026-09-10",
-        "cost": {
-          "input": 0.15,
-          "output": 0.6,
-          "cacheRead": 0.003
-        }
-      },
-      "configuredAt": 1792082153767
     },
     {
       "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
@@ -1205,6 +1175,36 @@
       },
       "configuredModelId": "dda04b50-8a70-4ce4-bb49-f459c3cb2395",
       "configuredAt": 1792082297425
+    },
+    {
+      "configuredModelId": "db68afdc-162e-4adb-8cc2-61312d790804",
+      "providerId": "417bc47e-75ad-4fb4-9f54-2dbe86ddedce",
+      "info": {
+        "id": "deepseek-flash",
+        "displayName": "DeepSeek V4.1 Flash",
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "limits": {
+          "context": 1000000,
+          "output": 393216
+        },
+        "reasoning": true,
+        "toolCall": true,
+        "releaseDate": "2026-09-10",
+        "cost": {
+          "input": 0.15,
+          "output": 0.6,
+          "cacheRead": 0.003
+        }
+      },
+      "configuredAt": 1792082153767
     }
   ],
   "backends": {

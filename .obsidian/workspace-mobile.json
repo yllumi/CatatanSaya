@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pemuda/Rancangan Sistem Herregistrasi Anggota.md",
+                "file": "Buku How to Draw Chibi ala Honhon/BAB 1 - Mengenal Style Chibi Diri Sendiri.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Rancangan Sistem Herregistrasi Anggota"
+              "title": "BAB 1 - Mengenal Style Chibi Diri Sendiri"
             }
           }
         ],
@@ -229,9 +229,19 @@
           "icon": "lucide-list",
           "title": "Outline"
         }
+      },
+      {
+        "id": "5cae1209bd9ce7a5",
+        "type": "leaf",
+        "state": {
+          "type": "copilot-chat-view",
+          "state": {},
+          "icon": "message-square",
+          "title": "Copilot (Quick Chat)"
+        }
       }
     ],
-    "currentTab": 0
+    "currentTab": 3
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -241,13 +251,16 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "copilot:Open Copilot Chat": false
     }
   },
-  "active": "6272300b9ed4e685",
+  "active": "5cae1209bd9ce7a5",
   "lastOpenFiles": [
-    "Keyakinan Melahirkan Ketenangan.md",
+    "copilot/copilot-conversations/No_User_Question_Asked@20261016_195137.md",
+    "Buku How to Draw Chibi ala Honhon/Outline.md",
     "Pemuda/Rancangan Sistem Herregistrasi Anggota.md",
+    "Keyakinan Melahirkan Ketenangan.md",
     "ahahahahahah.md",
     "Training/Agentic AI for PT Sofco Graha.md",
     "Training",
