@@ -495,15 +495,6 @@
     {
       "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
       "info": {
-        "id": "opencode/cat-jam-free",
-        "displayName": "opencode/Cat Jam Free"
-      },
-      "configuredModelId": "56020603-5d0e-464d-8f12-f68bb6cd88db",
-      "configuredAt": 1792082295734
-    },
-    {
-      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
-      "info": {
         "id": "opencode/claude-fable-5-1",
         "displayName": "opencode/Claude Fable 5.1"
       },
@@ -891,15 +882,6 @@
     {
       "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
       "info": {
-        "id": "opencode-go/cat-jam-free",
-        "displayName": "opencode-go/Cat Jam Free"
-      },
-      "configuredModelId": "ac40f1c4-3ddd-4018-9e8b-5fccaf4766b9",
-      "configuredAt": 1792082295771
-    },
-    {
-      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
-      "info": {
         "id": "opencode-go/claude-haiku-5-5",
         "displayName": "opencode-go/Claude Haiku 5.5"
       },
@@ -1214,6 +1196,24 @@
       },
       "configuredModelId": "4957ce7e-3d7c-4ba4-a325-13a712c6c806",
       "configuredAt": 1792157985450
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/beam-free",
+        "displayName": "opencode/Beam Free"
+      },
+      "configuredModelId": "b2eb046c-6aec-4dff-94a8-65a290e2c88d",
+      "configuredAt": 1792159789420
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/beam-free",
+        "displayName": "opencode-go/Beam Free"
+      },
+      "configuredModelId": "0eb2f56b-62b2-4513-9c3e-3916df6dfa72",
+      "configuredAt": 1792159789421
     }
   ],
   "backends": {
@@ -1234,8 +1234,7 @@
     "opencode": {
       "enabledModels": [
         "db68afdc-162e-4adb-8cc2-61312d790804",
-        "2b98a10a-e82e-42cd-8ab9-96d7884eb0a5",
-        "56020603-5d0e-464d-8f12-f68bb6cd88db"
+        "2b98a10a-e82e-42cd-8ab9-96d7884eb0a5"
       ]
     }
   },
