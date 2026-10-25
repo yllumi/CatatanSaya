@@ -4,7 +4,7 @@ mode: agent
 backendId: opencode
 sessionId: "ses_e8cdb2c48ffe89L3riCaUvoNIA"
 agentLabel: "Analisis Rancangan Aplikasi AnaOnline Mobile"
-usage: '{"usedTokens":76754,"contextWindow":1048576,"updatedAt":1792933945886}'
+usage: '{"usedTokens":148601,"contextWindow":1048576,"updatedAt":1792937302406}'
 tags:
   - copilot-conversation
 ---
@@ -108,3 +108,61 @@ MVP (Tahap 1) kini hanya **Iuran Anggota Digital**; Tahap 2 berisi Kanal Informa
 2. **Pembayaran herregistrasi** — saya tegaskan tetap di AnaOnline. Bila nanti biaya herregistrasi ingin memakai ledger iuran yang sama, itu keputusan terpisah yang membuka kembali A9 sebagian.
 3. **Metrik pengalihan** saya beri peringatan: klik tautan mengukur kesampaian pesan, bukan terselesaikannya herregistrasi. Untuk mengukur hasil, AnaOnline perlu mencatat penanda `?from=mobile` — sudah masuk catatan terbuka §12 bersama kebutuhan *deep link*.
 [Timestamp: 2026/10/25 20:11:02]
+
+**user**: hapus fitur Repositori Dokumen Organisasi beserta analisisnya
+[Timestamp: 2026/10/25 20:41:51]
+
+**ai**: Saya cari semua jejak Repositori Dokumen di dokumen.Sekarang arsitektur (§4.1, §4.2, §4.3, §4.4).Sekarang §5.2 (kaitan repositori) dan §6 model data.Itu tidak tepat. Saya lihat dan betulkan catatan desainnya.Sekarang §7 (baris keamanan), roadmap, prasyarat, risiko, metrik, catatan terbuka, penutup.Numbers need fixing (ada sisa A9 dan nomor §5.4/§5.5). Saya bereskan.Repositori Dokumen Organisasi sudah dihapus dari dokumen, termasuk seluruh analisisnya.
+
+## Yang dihapus
+
+- **§5.3 Repositori Dokumen Organisasi** sepenuhnya — tujuan, model `document` / `document_version` / `document_access_log`, lima prinsip penegakan (nomor unik, versi lama, `hash_berkas`, dst.), sub-bab pencarian `tsvector` + OCR, kaitan `document_id` dengan pengumuman, dan callout kontrol unggah.
+- Dari **§3.2**: blok "B. Repositori Dokumen" dan tautan "Terhubung ke Repositori Dokumen" pada Kanal Informasi.
+- Dari **§1** dan **§2**: baris tabel fitur tahap 2 dan baris turunan masalah dokumen.
+- Dari **§4**: modul `Document/`, kotak "Modul Dokumen (T2)" di diagram, contoh OCR di daftar proses konsumen, folder `offline/` untuk dokumen, rute unggah dokumen. Keputusan **A7** dan **A8** dihapus.
+- Dari **§6**: tabel `document*` dan `audience_rule`; targeting kembali ke `announcement_target`, `announcement` memakai `lampiran_ref`.
+- Dari **§7, §8, §9, §10, §11, §12**: dua baris keamanan dokumen, fase "Mesin targeting bersama" dan "Repositori dokumen", prasyarat kebijakan dokumen resmi, risiko R8 dan R10, dua metrik dokumen, serta tiga catatan terbuka.
+- **§13**: sebutan repositori di penutup.
+
+## Penyesuaian karena penghapusan
+
+- **Nomor bab dirapikan:** e-KTA jadi §5.3, pemutakhiran data §5.4, status keanggotaan §5.5. Semua rujukan silang diperiksa ulang.
+- **Kode keputusan dirapikan:** A7 dan A8 hilang, jadi keputusan herregistrasi (dulu A9) menjadi **A7**. Sisa rujukan "A9" di model data sudah diperbaiki.
+- **Roadmap Tahap 2** tinggal tiga fase: 6 Kanal informasi, 7 e-KTA, 8 Uji coba. Catatan dependensi diubah: fase 6 dan 7 kini tidak saling bergantung, jadi bisa paralel atau dibalik urutannya.
+
+## Satu hal yang saya sisakan
+
+Tidak ada lagi indikasi bahwa fitur ini pernah direncanakan. Saya sengaja **tidak** menambahkan footnote "dihapus atas permintaan" di mana pun, agar dokumen dibaca sebagai rancangan yang bersih. Kalau Anda ingin tetap ada catatan keputusan (*decision log*) bahwa repositori dokumen ditangani di luar aplikasi mobile, saya bisa tambahkan satu butir di §12 Catatan Terbuka.
+[Timestamp: 2026/10/25 20:41:51]
+
+**user**: Terkait iuran anggota digital, nominalnya ditentukan oleh PP, sampai detik ini besarannya adalah Rp 20.000. Didistribusikan ke setiap level pimpinan dengan porsi: 50% untuk Pimpinan Cabang, 20% untuk Pimpinan Daerah, 15% untuk Pimpinan Wilayah dan 15% untuk Pimpinan Pusat.
+Status tagihan cukup 2 saja: belum_bayar dan lunas. Tagihan bulan sebelumnya yang belum terbayar dapat dibayar kapanpun. Begitu pula tagihan bulan mendatang dapat dibayar lebih cepat. Pembayaran bisa dilakukan minimal 1 bulan tagihan, dan dapat diakumulasikan sejumlah bulan yang diinginkan.
+Setiap akun memiliki role: anggota, admin_pc, admin_pd, admin_pw, admin_pp dan superadmin. Role ini dibawa dari data anggota dari database anaonline ketika sudah login. Sudah ada API untuk login.
+Anggota dengan role admin dapat mengakses halaman admin di jenjangnya masing-masing, dan dapat melihat rekap pembayaran iuran anggota sampai batas levelnya.
+[Timestamp: 2026/10/25 21:04:10]
+
+**ai**: Saya baca bagian-bagian yang terdampak aturan baru ini sebelum mengubah.Sekarang saya terapkan. Mulai dari §5.1 — aturan nominal, porsi, status, dan pembayaran multi-bulan.Sekarang §3.1 (status tagihan), §4 (role, rute), keputusan arsitektur, dan model data.Sekarang §6 model data.Sekarang §7 keamanan, roadmap, risiko, metrik, dan catatan terbuka.Sudah diterapkan. Iuran kini terdefinisi konkret, dan ada bab baru untuk peran serta halaman admin.
+
+## Yang berubah
+
+**§5.1 Iuran — ketentuan nominal & porsi**
+- Tabel Rp 20.000 dengan rincian per jenjang: Cabang 50% (Rp 10.000), Daerah 20% (Rp 4.000), Wilayah 15% (Rp 3.000), Pusat 15% (Rp 3.000).
+- Model aturan `contribution_rule` + `contribution_share` (basis poin) dengan **seed** nilai tersebut. Nominal tidak di-*hardcode* di frontend, dan **aturan yang dipakai adalah aturan pada periode tagihan** — jadi kenaikan nominal PP kelak tidak mengubah tagihan atau jurnal lama.
+
+**Status tagihan dua saja** — `belum_bayar` → `lunas`. Saya tambahkan catatan bahwa percobaan bayar yang batal/kedaluwarsa tetap meninggalkan tagihan `belum_bayar`, karena siklus gateway hidup di `payment_intent`, bukan di tagihan.
+
+**Aturan pembayaran**: tunggakan bisa dibayar kapan pun, bulan mendatang bisa dibayar di muka, satu sesi minimal 1 bulan dan akumulatif, kombinasi bebas. Pembayaran akumulatif dialokasikan **per tagihan** lewat tabel `payment_intent_bill` — tanpa itu, 6 bulan yang dibayar sekaligus hanya jadi lump sum yang tak bisa direkonsiliasi. Ada juga prinsip atomisitas per sesi: tidak boleh "uang masuk penuh tapi sebagian bulan tertunggak".
+
+**Bab baru §5.2 — Peran Pengguna & Halaman Admin Jenjang**
+- Enam role Anda beserta cakupan data dan hak akses admin.
+- Role **dibawa dari API login AnaOnline**, tidak dikelola di mobile; disimpan hanya sebagai salinan untuk tampilan/routing, otorisasi tetap di server.
+- Halaman admin: ringkasan, daftar anggota, matriks 12 bulan, drill-down (dengan syarat total anak = total induk), ekspor, dan detail anggota.
+- Batasan: tidak boleh mengubah status lunas manual, tidak menghapus pembayaran, dan rekap tidak menampilkan NIK/alamat.
+
+**Dampak ke bagian lain**: §3.1 (status & nominal + halaman admin), §4 (modul `Region/` dan `Reporting/`, rute `(leader)`), keputusan **A8–A10** baru, §6 model data (`region`, `contribution_rule`, `contribution_share`, `payment_intent_bill`, `role` pada `member_snapshot`), §7 keamanan (eskalasi peran, pembayaran akumulatif), roadmap fase 0–3, risiko R2/R4/R11/R12, metrik baru, dan catatan terbuka.
+
+## Dua hal yang saya biarkan terbuka
+
+1. **Penyetuju penarikan.** Role admin menentukan siapa yang *melihat* dan *mengajukan*. Belum jelas apakah admin yang sama juga menyetujui — kalau ya, maker-checker jadi satu orang dan kontrolnya hilang. Saya tulis sebagai pertanyaan di §5.1.
+2. **Kontrak respons API login.** Perlu dipastikan respons memuat `role` **dan** ID cabang/daerah/wilayah. Tanpa wilayah, halaman admin tidak bisa menentukan batas levelnya. Ini masuk risiko R2 dan catatan terbuka.
+[Timestamp: 2026/10/25 21:04:10]
