@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "47e25861c3343614",
+        "id": "90a3c3c59ed343d4",
         "type": "tabs",
         "children": [
           {
-            "id": "b8e1231432bf1d9f",
+            "id": "ab80c72d8d709b31",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "Analisis Rancangan Aplikasi AnaOnline Mobile"
             }
+          },
+          {
+            "id": "b290bf380928cbff",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Pemuda/Ringkasan Rancangan Aplikasi AnaOnline Mobile.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Ringkasan Rancangan Aplikasi AnaOnline Mobile"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -185,7 +200,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 437.03704833984375
+    "width": 437.03704833984375,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -199,22 +215,23 @@
       "copilot:Open Copilot Agent Chat": false
     }
   },
-  "active": "dc9e00eee7d18c9f",
+  "active": "b290bf380928cbff",
   "lastOpenFiles": [
+    "Pemuda/Analisis Rancangan Aplikasi AnaOnline Mobile.md",
+    "Pemuda/Ringkasan Rancangan Aplikasi AnaOnline Mobile.md",
+    "Pemuda/Makalah - Redesain Sistematika Halaqah Berbasis Digital-Blended System.md",
+    "Pemuda/Digitalisasi Iuran Anggota dan Pemutakhiran Data berbasis Aplikasi Mobile.md",
     "Pemuda/XXm0NyEM",
     "Pemuda/sedg3hmfF",
     "Pemuda/sed7gKKgT",
     "Buku How to Draw Chibi ala Honhon/Bab 2 - Wajah & Variasi Ekspresi.md",
-    "Pemuda/Analisis Rancangan Aplikasi AnaOnline Mobile.md",
     "Silabus CP Junior.md",
     "Pemuda/Ketentuan Herregistrasi Anggota Pemuda Persis.md",
     "Pemuda/Strategi Menghimpun Data Anggota Pemuda.md",
     "copilot/copilot-conversations/agent__Berdasarkan_latar_belakang_pada_dokumen_Digitalisasi_Iuran_Anggota_dan_Pem@20261025_200308.md",
-    "Pemuda/Digitalisasi Iuran Anggota dan Pemutakhiran Data berbasis Aplikasi Mobile.md",
     "Pemuda/Baseline Bidang Administrasi Pemuda Persis.md",
     "copilot/copilot-conversations/agent__Sistem_herregistrasi_saat_ini_rasanya_masih_belum_menyatu_padu_dengan@20261025_184733.md",
     "Pemuda/Program Administrasi Pemuda Persis.md",
-    "Pemuda/Makalah - Redesain Sistematika Halaqah Berbasis Digital-Blended System.md",
     "Mengapa waktu hidup yang singkat ini jadi penentu nasib di akhirat yang kekal.md",
     "Buku How to Draw Chibi ala Honhon/BAB 1 - Mengenal Style Chibi Diri Sendiri.md",
     "Buku How to Draw Chibi ala Honhon/Bab 3 - Gestur, Pose & Tangan Sederhana.md",
@@ -236,7 +253,6 @@
     "copilot/skills/copilot-web-fetch/web-fetch.sh",
     "copilot/skills/copilot-web-fetch",
     "copilot/skills/copilot-web-search/SKILL.md",
-    "copilot/skills/copilot-web-search/web-search.ps1",
     "copilot/skills/obsidian-cli/SKILL.md",
     "copilot/skills/json-canvas/SKILL.md",
     "Tanpa judul.canvas"
