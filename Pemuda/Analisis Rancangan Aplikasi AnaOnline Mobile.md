@@ -63,7 +63,7 @@ Keterangan: **T1** = MVP/Tahap 1, **T2** = Tahap 2.
 ### 3.1 Termasuk dalam MVP (Tahap 1)
 
 **A. Iuran Anggota Digital**
-- Tagihan bulanan otomatis per anggota (nominal ditetapkan Pimpinan Pusat, bisa berbeda per jenjang/status).
+- Tagihan bulanan otomatis per anggota.
 - Pembayaran via *payment gateway*: Virtual Account, QRIS, e-wallet.
 - Status tagihan: `belum_bayar`, `menunggu`, `lunas`, `kadaluarsa`, `gagal`.
 - Riwayat pembayaran anggota dan kuitansi digital.
