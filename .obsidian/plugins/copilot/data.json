@@ -1404,24 +1404,6 @@
     {
       "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
       "info": {
-        "id": "ollama/gemma3:latest",
-        "displayName": "ollama/gemma3:latest"
-      },
-      "configuredModelId": "eb890822-d68b-4472-9ea5-5e9a155902fd",
-      "configuredAt": 1792926801966
-    },
-    {
-      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
-      "info": {
-        "id": "ollama/phi3:mini",
-        "displayName": "ollama/phi3:mini"
-      },
-      "configuredModelId": "809a7b94-b898-42c1-8e8d-07332ffdb466",
-      "configuredAt": 1792926801966
-    },
-    {
-      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
-      "info": {
         "id": "opencode-go/gemini-4-argon",
         "displayName": "opencode-go/Gemini 4 Argon"
       },
@@ -1436,6 +1418,24 @@
       },
       "configuredModelId": "6d14df25-1c48-4c14-a81a-6d740e492d77",
       "configuredAt": 1792926801966
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "ollama/gemma3:latest",
+        "displayName": "ollama/gemma3:latest"
+      },
+      "configuredModelId": "b7219065-1d85-4e12-b74e-7b53022fc871",
+      "configuredAt": 1792972044905
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "ollama/phi3:mini",
+        "displayName": "ollama/phi3:mini"
+      },
+      "configuredModelId": "43fe0274-c317-4ce5-b579-478761476984",
+      "configuredAt": 1792972044907
     }
   ],
   "backends": {
