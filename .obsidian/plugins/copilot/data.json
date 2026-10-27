@@ -1425,8 +1425,8 @@
         "id": "ollama/gemma3:latest",
         "displayName": "ollama/gemma3:latest"
       },
-      "configuredModelId": "b7219065-1d85-4e12-b74e-7b53022fc871",
-      "configuredAt": 1792972044905
+      "configuredModelId": "6693e8c9-0bbf-4d90-9aa2-3643e2070bea",
+      "configuredAt": 1793090361378
     },
     {
       "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
@@ -1434,8 +1434,8 @@
         "id": "ollama/phi3:mini",
         "displayName": "ollama/phi3:mini"
       },
-      "configuredModelId": "43fe0274-c317-4ce5-b579-478761476984",
-      "configuredAt": 1792972044907
+      "configuredModelId": "178cf733-3376-42b3-b6c7-566d9edf1b47",
+      "configuredAt": 1793090361379
     }
   ],
   "backends": {
