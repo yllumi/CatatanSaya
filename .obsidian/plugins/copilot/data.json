@@ -317,7 +317,7 @@
   "inlineEditCommands": [],
   "projectList": [],
   "lastDismissedVersion": "4.0.16",
-  "lastShownStartupVersion": "4.0.16",
+  "lastShownStartupVersion": "4.0.17",
   "passMarkdownImages": true,
   "enableAutonomousAgent": true,
   "enableCustomPromptTemplating": true,
@@ -787,15 +787,6 @@
       },
       "configuredModelId": "1c687dae-733a-4343-82db-1e45a3e6e9b3",
       "configuredAt": 1792082295767
-    },
-    {
-      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
-      "info": {
-        "id": "opencode/nemotron-3-ultra-free",
-        "displayName": "opencode/Nemotron 3 Ultra Free"
-      },
-      "configuredModelId": "b7cb8435-12c0-402a-98e6-5dd17fa09ba0",
-      "configuredAt": 1792082295768
     },
     {
       "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
@@ -1425,8 +1416,8 @@
         "id": "ollama/gemma3:latest",
         "displayName": "ollama/gemma3:latest"
       },
-      "configuredModelId": "6693e8c9-0bbf-4d90-9aa2-3643e2070bea",
-      "configuredAt": 1793090361378
+      "configuredModelId": "db6f5513-9d83-495b-ab5d-11ad16df2cd1",
+      "configuredAt": 1793503768790
     },
     {
       "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
@@ -1434,8 +1425,8 @@
         "id": "ollama/phi3:mini",
         "displayName": "ollama/phi3:mini"
       },
-      "configuredModelId": "178cf733-3376-42b3-b6c7-566d9edf1b47",
-      "configuredAt": 1793090361379
+      "configuredModelId": "4f8ac99d-0ba9-4551-a678-e41e4c1ceae0",
+      "configuredAt": 1793503768791
     }
   ],
   "backends": {

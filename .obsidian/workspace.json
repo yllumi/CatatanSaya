@@ -78,7 +78,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Penelusuran"
+              "title": "Search"
             }
           },
           {
@@ -215,7 +215,7 @@
       "copilot:Open Copilot Agent Chat": false
     }
   },
-  "active": "b290bf380928cbff",
+  "active": "cc15575e636a36f7",
   "lastOpenFiles": [
     "Pemuda/Analisis Rancangan Aplikasi AnaOnline Mobile.md",
     "Pemuda/Ringkasan Rancangan Aplikasi AnaOnline Mobile.md",
