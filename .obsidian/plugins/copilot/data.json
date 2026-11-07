@@ -317,7 +317,7 @@
   "inlineEditCommands": [],
   "projectList": [],
   "lastDismissedVersion": "4.0.16",
-  "lastShownStartupVersion": "4.0.17",
+  "lastShownStartupVersion": "4.0.18",
   "passMarkdownImages": true,
   "enableAutonomousAgent": true,
   "enableCustomPromptTemplating": true,
@@ -846,7 +846,7 @@
       "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
       "info": {
         "id": "opencode-go/deepseek-v4-pro",
-        "displayName": "opencode-go/DeepSeek V4 Pro (New)"
+        "displayName": "opencode-go/DeepSeek V4 Pro"
       },
       "configuredModelId": "434df49a-5a41-4dd1-b462-d5506bd2c371",
       "configuredAt": 1792082295772
@@ -1413,11 +1413,38 @@
     {
       "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
       "info": {
+        "id": "opencode/crouton-alpha-free",
+        "displayName": "opencode/Crouton Alpha Free"
+      },
+      "configuredModelId": "9d730486-cdc5-4ace-b405-b198105d858b",
+      "configuredAt": 1793863332346
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode/pulse-alpha-free",
+        "displayName": "opencode/Pulse Alpha Free"
+      },
+      "configuredModelId": "ca283ede-ca77-4676-85d3-2247faeba277",
+      "configuredAt": 1793863332359
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "opencode-go/hy4",
+        "displayName": "opencode-go/Hy4"
+      },
+      "configuredModelId": "4709e51a-d986-4069-9d33-2ad7b704b9be",
+      "configuredAt": 1793863332361
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
         "id": "ollama/gemma3:latest",
         "displayName": "ollama/gemma3:latest"
       },
-      "configuredModelId": "db6f5513-9d83-495b-ab5d-11ad16df2cd1",
-      "configuredAt": 1793503768790
+      "configuredModelId": "180a53bb-a891-4250-95c4-e383fec5258d",
+      "configuredAt": 1793863333479
     },
     {
       "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
@@ -1425,8 +1452,8 @@
         "id": "ollama/phi3:mini",
         "displayName": "ollama/phi3:mini"
       },
-      "configuredModelId": "4f8ac99d-0ba9-4551-a678-e41e4c1ceae0",
-      "configuredAt": 1793503768791
+      "configuredModelId": "d8e26744-40af-46c8-9d6b-595d8d0f1b7b",
+      "configuredAt": 1793863333480
     }
   ],
   "backends": {
