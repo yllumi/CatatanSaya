@@ -25,14 +25,32 @@
             "id": "b290bf380928cbff",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Siap.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Siap"
+            }
+          },
+          {
+            "id": "2e8d1da01190d878",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Disaster Recovery Rames.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Disaster Recovery Rames"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -211,8 +229,10 @@
       "copilot:Open Copilot Agent Chat": false
     }
   },
-  "active": "b290bf380928cbff",
+  "active": "2e8d1da01190d878",
   "lastOpenFiles": [
+    "Siap.md",
+    "Disaster Recovery Rames.md",
     "Silabus CP Junior.md",
     "Pemuda/Analisis Rancangan Aplikasi AnaOnline Mobile.md",
     "Pemuda/Ringkasan Rancangan Aplikasi AnaOnline Mobile.md",
@@ -235,7 +255,6 @@
     "Buku How to Draw Chibi ala Honhon/Bab 5 - Teknik Pewarnaan.md",
     "Buku How to Draw Chibi ala Honhon/Bab 4 - Rambut, Hijab & Outfit.md",
     "Buku How to Draw Chibi ala Honhon/Outline.md",
-    "Siap.md",
     "Untitled.canvas",
     "copilot/copilot-conversations/agent__Kembangkan_tulisan_dari_setiap_subbab_pada_dokumen_ini_dengan_bahasa@20261015_234213.md",
     "copilot/copilot-conversations",
@@ -250,7 +269,6 @@
     "copilot/skills/copilot-web-fetch",
     "copilot/skills/copilot-web-search/SKILL.md",
     "copilot/skills/obsidian-cli/SKILL.md",
-    "copilot/skills/json-canvas/SKILL.md",
     "Tanpa judul.canvas"
   ]
 }
