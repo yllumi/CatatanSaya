@@ -1,103 +1,98 @@
-## Ringkasan
+## Ringkasan penilaian
 
-Saat ini **instalasi ini belum bisa di-DR (disaster recovery)**: seluruh metadata app hanya ter-backup **lokal di server yang sama**, dan volume app yang hidup **tidak punya satu pun snapshot offsite**. Jadi bila server hilang total, data app hilang total — bukan hanya "harus menambah ulang satu per satu". Bahkan bila backup-nya ada, belum ada jalur *restore massal*: restore yang tersedia bersifat per-volume dan butuh record app yang sudah ada di DB.
+Arahnya benar di 3 hal: metadata offsite, enkripsi client-side, dan satu pemicu restore. Tapi rencana "cukup pegang akun Turso + key enkripsi" **belum cukup**, karena (a) ada state yang **tidak ada di DB sama sekali**, (b) kode sekarang **belum bisa jalan di atas Turso** (semuanya berbasis berkas SQLite), (c) "enkripsi semuanya" bukan sekadar menyimpan ciphertext di kolom, dan (d) **orkestrator restore massal tidak ada** — Turso tidak menciptakannya.
 
 ---
 
-## 1. Inventaris state yang harus dipulihkan
+## A. State yang tetap terlewat walau DB pindah ke Turso
 
-| State | Lokasi | Offsite? | Bisa diregenerasi? |
+| # | Yang terlewat | Bukti di repo/instalasi | Akibat |
 |---|---|---|---|
-| Metadata app/user/billing/server/parked/backup-selection | `rames.sqlite` di named volume `rames` (`docker-compose.yml`) | ❌ snapshot `VACUUM INTO` lokal di `/var/lib/rames/backup` | ❌ (sumber kebenaran) |
-| **Secret env app** (nilai literal, mis. `MARIADB_ROOT_PASSWORD`) | kolom `data` → field `env` di `apps_apps` **dan** `database/env/<name>.env` | ❌ | ❌ |
-| Artefak app (`compose_content`, override port/nama/env, clone repo) | `apps/<name>/` (bind `${PWD}`) | ❌ | sebagian: template app dari `templates/<slug>` (git), app repo dari git |
-| Deploy key SSH app + `known_hosts` | `database/keys/` (gitignored) | ❌ | hanya bila masih punya kuncinya |
-| Passphrase restic | `database/restic/password` | ❌ (kunci ke semua backup!) | ❌ |
-| Konfigurasi dashboard (`.env`: `SESSION_SECRET`, AWS, `APP_DOMAIN`, `PORT_RANGE_*`) | root repo (gitignored) | ❌ | ⚠️ manual |
-| Vhost Nginx | `/etc/nginx/sites-available` (host) | ❌ | ✅ `NginxConfigGenerator` dari DB |
-| Sertifikat SSL | `/etc/letsencrypt` | ❌ | ✅ re-issue (`SslIssuer`), kena rate limit LE |
-| **Data volume app** | Docker volumes | ⚠️ restic S3 — **hanya yang dicentang "Berkala"** | ❌ |
-| Konten parked HTML, logo branding | `database/parked/`, volume `rames` | ❌ | ❌ (dicatat sebagai batasan: `SPECS §8j.9`, `§7.16`) |
-
-## 2. Kondisi nyata server ini (bukti perintah)
-
-Diambil read-only (SELECT / `restic snapshots`), tanpa menyentuh data:
-
-- App hidup: **2** (`image` = Chevereto, `picoclaw`); server registry: hanya `local` (single-server, belum ada agent).
-- Volume hidup: `image_chevereto-images`, `image_mariadb-data`, `image_redis-data`, `picoclaw_picoclaw-data`, `picoclaw_picoclaw-ssh`.
-- `backup_volumes` yang `scheduled:true` = **3**, semuanya milik app yang sudah dihapus (`testdocker_*`, `nocodb_nocodb-data`). **Tidak satu pun volume app hidup terjadwal** — `image_*` bahkan belum terdaftar.
-- Run terjadwal terakhir (2026-11-07 08:37, `runtime/backup/status.json`): `volumes: 0`, status `ok` → **sukses palsu**, tidak ada peringatan.
-- Repo restic: **45 snapshot**, terbaru **2026-10-29**, semuanya `project:wahoo` (app yang sudah tidak ada). Tag snapshots berisi `volume:`, `project:`, `app:<id>`, `strategy:` → bagus, pemetaan app↔volume bisa direkonstruksi dari S3 saja.
-- Backup DB: 8 snapshot lokal (terakhir 2026-11-07), retensi 7 hari/4 pekan/3 bulan — semuanya di volume `rames` yang sama, yang **sengaja dikecualikan** dari backup volume (`SPECS §8i.7`).
-- Puing: `apps/hermes/` kosong, `database/keys/` masih menyimpan kunci `hey`, `sollubiznew`, `wasender` (app sudah tidak ada).
-
-**Kesimpulan angka:** RPO efektif untuk data app saat ini = ∞ (tidak ada backup), untuk metadata = 0 hanya bila disk selamat.
-
-## 3. Gap menuju "pulihkan semua app ke server lain"
-
-- **G1 — DB tidak pernah offsite.** Snapshot DB satu-satunya salinan ada di server yang sama. Ini gap paling fatal: DB memuat daftar app, port host, template, subdomain, **dan secret env**.
-- **G2 — Artefak bind-mount tidak ikut backup apa pun.** `apps/`, `database/env/`, `database/keys/`, `database/restic/password`, `.env`. Tanpa ini, DB saja tidak cukup: app template butuh override port hasil pilihan user, app private butuh deploy key.
-- **G3 — Backup volume opt-in & tidak ada kelengkapan.** Default OFF, dan tidak ada guard saat target terjadwal hilang → run "0 volume, ok".
-- **G4 — Tidak ada konsep "bundle instalasi".** Tidak ada satu artefak/snapshot yang menyatakan "inilah seluruh instalasi pada waktu T".
-- **G5 — Tidak ada restore massal.** `cli/backup.php restore` butuh `appId` + record app (validasi kepemilikan); `restore-archived` membuat volume baru per volume. Untuk N app: N × (buat volume → buat ulang app → arahkan ke volume → tunggu deploy) — persis pekerjaan manual yang ingin dihindari.
-- **G6 — Dependensi lingkungan server baru:** DNS/wildcard, `APP_DOMAIN`/subdomain bisa berbeda, bentrok host port (`PORT_RANGE_*`), bentrok `container_name` (`ContainerNames` fail-fast), SSL re-issue kena rate limit Let's Encrypt.
-- **G7 — Secret ada di DB dalam bentuk plaintext** (terverifikasi: `env` berisi nilai literal, panjang 48 char untuk password). Jadi setiap salinan offsite DB **wajib terenkripsi** dan aksesnya setara akses produksi.
-- **G8 — Mode multi-server tidak menyelamatkan.** DB agent adalah data turunan (`SPECS §5.2`) dan juga lokal; agent tetap melayani app bila control plane mati, tapi tidak bisa menggantikan control plane (tanpa user/billing/registry). Repo restic tiap server dikonfigurasi dari `.env` masing-masing server.
-- **G9 — Tidak ada uji restore berkala**, jadi "ada snapshot" belum terbukti "bisa dipulihkan".
-
-## 4. Opsi
-
-### Opsi A — Runbook cold DR sekarang (tanpa ubah kode, dampak terbesar)
-1. **Offsite metadata**: ambil hasil `VACUUM INTO` (sudah konsisten, kelas `DbBackup`) lalu dorong ke restic repo yang sama dari host/helper — **jangan** backup volume `rames` dengan kebijakan `stop` (akan mematikan proses backup itu sendiri).
-2. **Offsite artefak**: `restic backup apps/ database/env/ database/keys/ .env` (tag baru, mis. `role:install`) — jangan mencampur tag yang dipakai UI `volume:`/`project:`/`app:`.
-3. **Nyalakan "Berkala"** untuk semua volume app hidup + `php cli/backup.php run <volume> manual`, lalu buktikan dengan `restic snapshots` bahwa tag app benar.
-4. **Simpan offsite di luar S3**: `database/restic/password` + `.env` (tanpa itu backup = brankas tanpa kunci).
-5. **Uji drill**: pulihkan ke VPS sementara (DB restore + 1 volume) → buktikan, jangan diasumsikan.
-6. Tambah guard murah: run dengan `volumes: 0` saat ada app hidup ⇒ status `warning`, bukan `ok`.
-
-### Opsi B — Fitur "DR bundle + restore instalasi" (yang benar-benar menjawab permintaan)
-Satu bundle per snapshot S3, dihasilkan worker async:
-
-```
-manifest.json      # versi dashboard, APP_DOMAIN asal, daftar app {id,name,template,ports,domains,volumes,restic_snapshot_id}
-rames.sqlite       # snapshot konsisten
-artifacts.tar.gz   # apps/, database/env/, database/keys/, branding/, parked/
-```
-
-- `cli/dr.php export` → bangun bundle → `restic backup` (tag `role:install`) → catat di `runtime/dr/status.json`.
-- `cli/dr.php restore --snapshot <id> [--domain baru]` di server baru, urutan **fail-fast sebelum efek samping**:
-  1. validasi repo + manifest + `restic check`;
-  2. restore DB (pakai `DbBackup::restore` — sudah aman/atomik) + artefak dengan permission benar (`env`/`keys` 0600);
-  3. remap `server_id` → `local`, deteksi bentrok nama/port/domain (`ContainerNames`, `AppPorts`, `SubdomainManager`);
-  4. per app: buat volume dari snapshot (jalur `VolumeRestoreService` arsip) → `docker compose up -d` lewat `DeployerInterface` (jangan jalur deploy kedua);
-  5. render ulang vhost (`NginxConfigGenerator`) → reload → enqueue SSL (`SslIssuer`) → cetak checklist DNS.
-- Karena `manifest` bisa juga direkonstruksi dari **tag snapshot restic**, bundle tetap bisa dipulihkan bila file manifest rusak.
-- Tidak ada otorisasi baru (CLI tepercaya), tanpa state di controller, semua logika di `app/library/Dr/` — konsekuensinya **Tingkat Verifikasi V3** + dokumentasi SPECS §8l/ARCHITECTURE §5.x.
-
-### Opsi C — Promote agent jadi control plane
-Dinilai **tidak disarankan** sekarang: DB agent adalah proyeksi turunan, tanpa user/billing/registry, dan butuh jalur migrasi state baru yang lebih berisiko daripada Opsi B.
-
-## 5. Rekomendasi urutan
-
-| Prioritas | Aksi | Efek |
-|---|---|---|
-| **P0 (hari ini)** | Opsi A butir 1–4 | Mengubah RPO data app dari ∞ → 24 jam |
-| **P0** | Drill restore 1 app ke host lain | Membuktikan backup benar-benar bisa dipakai |
-| **P1** | Guard "run 0 volume" + default "Berkala" ON untuk volume app | Menutup kegagalan senyap |
-| **P1** | Opsi B (`cli/dr.php` export/restore + manifest) | Menjawab "tanpa menambah satu per satu" |
-| **P2** | Kartu "Kesiapan DR" di `/backups` + drill terjadwal | Mencegah regresi diam-diam |
-
-## 6. Risiko yang wajib diketahui
-
-- **Snapshot DB memuat secret plaintext** → simpan hanya di restic (terenkripsi) atau bundle terenkripsi; jangan taruh di bucket terbuka/laptop tanpa enkripsi.
-- **Passphrase restic + `.env` adalah kunci tunggal**: hilang = semua snapshot S3 tidak berguna.
-- **SSL**: re-issue massal bisa menyentuh limit LE (5 duplikat/minggu per domain); restore harus menjadwalkan SSL bertahap, bukan serentak.
-- **Port & nama container** tidak dijamin kosong di server baru → restore massal wajib preflight `AppPorts`/`ContainerNames` sebelum menulis apa pun.
-- **App hasil "Impor project compose"** menyimpan `local_path` absolut (`ComposeImporter`) — tidak portabel lintas host, harus ditangani terpisah.
-- **S3 berbeda region/akun**: bila bucket ikut hilang bersama server (mis. akun cloud yang sama), DR tetap gagal — simpan salinan kedua.
+| A1 | **`.env` control plane** — bukan hanya "kredensial Turso" | Key yang ada: `SESSION_SECRET`, `APP_DOMAIN`, `PORT_RANGE_*`, `AWS_*`, **`BILLING_DUITKU_API_KEY`**, `ADMIN_EMAIL` | Pembayaran mati, rentang port beda, admin email kosong ⇒ SSL gagal |
+| A2 | **Passphrase restic** (`database/restic/password`) | file 0600, gitignored | Tanpa ini snapshot volume S3 **tidak bisa dibuka** — jadi butuh **3 rahasia**, bukan 2 |
+| A3 | **Paket `host_ports` lokal** | `PortOverrides::persist()` hanya menulis `docker-compose.override.ports.yml` + `compose_files`/`primary_port`; `host_ports` metadata hanya untuk app agent | Restore DB-only ⇒ port host pilihan user hilang, `up` memakai port bawaan repo → bentrok/berubah |
+| A4 | **Private key SSH app** | DB hanya menyimpan nama (`ssh_key`); isi kunci di `database/keys/<name>` (`SshKeyManager`) | App repo privat gagal `git clone` saat restore |
+| A5 | **`known_hosts`** | `database/keys/known_hosts` (`config/deploy.php`) | Jangan direstore buta — host key GitHub bisa berubah; lebih baik TOFU ulang |
+| A6 | **Logo branding** (biner di volume `rames`, **bukan** di tabel) + **konten parked HTML** | `SPECS §7.16`, `§8j.9` | Logo hilang; domain parkir mode `html` ⇒ 404 senyap |
+| A7 | **Bind mount & app impor compose** | `VolumeTargetMap` hanya named volume; `ComposeImporter` mencatat `local_path` absolut | Data bind tidak ter-backup; app impor tidak portabel lintas host |
+| A8 | **`/etc/letsencrypt` + `CLOUDFLARE_CREDS`** | mount di `docker-compose.yml` | Re-issue = rate limit LE; DNS-01 butuh file kredensial yang tak ada di DB |
+| A9 | **Image hasil `build:` lokal** | repo-mode app | Harus rebuild: butuh source + kredensial registry/build-secret; tag upstream bisa hilang |
+| A10 | **Material TLS + token agent** | ada di `servers_servers` (`token`, `tls_cert_pem`, lihat `AgentClient`) | Bagus (ikut DB), **tapi** agent yang diinstal ulang punya cert baru ≠ pin lama; DB agent tetap lokal |
 
 ---
 
-Lanjutan yang bisa saya kerjakan (pilih salah satu): **(1)** susun runbook P0 lengkap dengan perintah per langkah (termasuk skrip host kecil untuk offsite DB+artefak), **(2)** rancang detail + implementasi `cli/dr.php export|restore` beserta manifest dan test (V3), atau **(3)** tambahkan guard kelengkapan backup + kartu kesiapan DR di `/backups`.
+## B. Kode sekarang tidak bisa jalan di Turso tanpa refactor inti
 
-Sebelum memilih (2), saya perlu 3 keputusan Anda: apakah akan tetap **single-server** atau ada agent; apakah **bundle menyertakan secret** (terenkripsi) atau dipisah manual; dan apakah **SSL di-issue otomatis** saat restore atau hanya checklist.
+Bukti konkret:
+
+- **Berbasis berkas**: `config('deploy.sqlite_file')` → `PDO('sqlite:…')` (`SqliteDatabase`). Identity handle = `realpath#dev:ino` → konsep "berkas diganti" tidak ada di remote.
+- **`VACUUM INTO`** untuk snapshot (`SqliteDatabase::snapshot`) — Turso/libSQL tidak menyediakan snapshot berbasis file; seluruh desain `DbBackup` (snapshot → unduh → restore berkas → `PRAGMA integrity_check`) harus diganti ke `turso db dump`/PITR.
+- **`flock` sebagai mutex lintas-proses** (`DbBackup`, `BackupRunLock`). Lock file lokal tidak berlaku lintas host/pod; dua writer remote bisa balapan.
+- **`PRAGMA`**: `journal_mode=WAL`, `busy_timeout`, `synchronous`, `table_info` di `SchemaMigrations` — harus diuji satu per satu terhadap sqld (sebagian diterima, sebagian no-op).
+- **`BEGIN IMMEDIATE`**: aman untuk single-writer, tapi di Turso transaksi interaktif punya batas durasi; closure panjang (`transferAllFrom`, impor JSON) berisiko timeout.
+- **Endpoint unduh/restore berbasis berkas** (`GET /backups/db/download`, `cli/db.php restore <berkas>`) — harus berubah.
+- **Dependensi runtime**: dashboard hari ini tetap jalan tanpa internet; dengan Turso, Turso down = **dashboard mati total** (auth & daftar app butuh DB). Worker Webman persistent + query remote ⇒ p95 dan throughput turun; tanpa replica/cache, tiap request auth jadi round-trip.
+
+---
+
+## C. "Enkripsi dulu" — yang tidak gratis
+
+- Enkripsi level-halaman **tidak mungkin** di Turso ⇒ harus **field-level AEAD**. Berarti mengubah **seluruh jalur baca**: `UserStore` (login), `AppAccess`, `EnvManager` (`$app['env']`), `ServerStore` (token), `TwoFactorService`, `ErrorStore`, billing.
+- Field mana yang wajib: `apps.env`, `apps.compose_content` (bisa memuat secret), `apps.ssh_key`, `servers.token`, secret 2FA, `error_events` (stack trace sering memuat kredensial), billing.
+- **Trade-off yang harus dipilih sadar**: mengenkripsi `name`/`username`/`domain` ⇒ index & keunikan (`AppStore::nameExistsOnServer`, login lookup) **rusak**. Jadi metadata tetap terbuka ⇒ Turso tetap melihat "siapa punya app apa, domain apa, berapa user".
+- **Integritas & rollback**: AEAD wajib + **AAD** terikat ke id/kolom, plus penanda versi monoton. Tanpa itu, siapa pun yang memegang token Turso bisa **mengembalikan nilai lama** (mis. saldo kredit) atau menghapus baris → dashboard "sehat" tapi data salah.
+- **Manajemen kunci**: KEK milik Anda + DEK per instalasi (rotasi tanpa re-enkripsi seluruh data). Wajib ada **break-glass**: bila key hilang, admin & 2FA tak bisa didekripsi ⇒ terkunci permanen walau DB utuh.
+
+---
+
+## D. Yang paling terlewat: tidak ada orkestrator restore
+
+Ini inti permintaan Anda, dan **tidak lahir dari Turso**. Yang belum ada sama sekali:
+
+1. Restore DB dari remote + **migrasi skema** ke versi kode baru (pin versi di manifest).
+2. Regenerasi artefak per app: template (`TemplateCatalog`), compose (`compose_content`/repo clone), **port override** (butuh A3 dulu).
+3. Preflight bentrok: nama container (`ContainerNames`), port host (`AppPorts`), subdomain (`SubdomainManager`).
+4. Restore volume dengan **urutan benar**: strategi `snapshot` harus sebelum container pertama `up`; strategi `dump` harus **setelah** container DB hidup (kode sekarang: `VolumeRestoreService` menuntut record app + container).
+5. `compose up` per app via `DeployerInterface` + tangkap kegagalan per app.
+6. Render ulang Nginx (`NginxConfigGenerator`) + reload, lalu **antrekan SSL** (rate limit ⇒ bertahap, bukan serentak).
+7. Idempoten & **resumable** (restore 20 app bisa putus di app ke-7), log/progress, serta laporan app mana gagal.
+8. Checklist eksternal: DNS, firewall 80/443, `APP_DOMAIN`, Cloudflare.
+
+---
+
+## E. Konsistensi antar-simpanan (point-in-time skew)
+
+Turso/DB di T1, volume restic di T2, artefak di T3. `backup_registry` di DB bisa **basi** (terbukti saat ini: registry mencatat app yang sudah dihapus, dan run terakhir memproses **0 volume** dengan status `ok`). Restore harus memakai aturan "snapshot volume **terbaru yang tidak lebih baru** dari snapshot DB", dan lebih aman **merekonstruksi manifest dari tag restic** (`volume:`/`project:`/`app:`) daripada percaya kolom `last_snapshot`.
+
+---
+
+## F. Konsekuensi memilih Turso (jujur)
+
+| Aspek | Kenyataan |
+|---|---|
+| Nilai tambah riil | Hanya bila Anda butuh **state live bersama** antar-host (control plane + agent membaca DB yang sama) |
+| Biaya | Refactor driver + locking + backup (V3), latensi per query, kuota rows-read (polling monitor/job), ketergantungan internet, 2 vendor (Turso + S3) |
+| Keamanan | Enkripsi server-side Turso **tidak** melindungi dari Turso sendiri → tetap perlu client-side; token Turso = kewenangan penuh atas ciphertext |
+| DR | Turso tetap perlu backup sendiri (PITR/dump); tabel ciphertext ≠ backup instalasi |
+| Alternatif setara | **restic sudah client-side encrypted dengan passphrase milik Anda** dan sudah offsite di S3 |
+
+---
+
+## G. Rekomendasi
+
+**Jika tujuannya murni DR (bukan multi-host live): jangan pindahkan DB ke Turso.** Tambahkan saja 3 hal kecil di atas mekanisme yang sudah ada:
+
+1. **P0-a (murah, wajib):** simpan `host_ports` untuk app **lokal** juga (paritas dengan agent) — menutup A3 tanpa menyentuh disk-artifact.
+2. **P0-b:** bundle DR terenkripsi di repo restic yang sudah ada: `rames.sqlite` (hasil `VACUUM INTO`, konsisten) + tar `apps/`, `database/env/`, `database/keys/`, `branding/`, `parked/` + `manifest.json` (versi, app list, port, domain, snapshot id per volume). Enkripsi = restic (sudah ada), tidak perlu kripto baru.
+3. **P1:** `cli/dr.php restore` = orkestrator §D, idempoten, urutan volume benar, plus guard "run 0 volume saat ada app hidup ⇒ warning".
+
+**Jika tetap mau Turso:** hibrida yang paling murah —
+- Turso untuk metadata **non-rahasia** saja (hindari refactor besar & masalah index);
+- secret tetap di **vault terenkripsi** (S3/restic) dan diambil saat boot;
+- hapus ketergantungan `VACUUM INTO`/`flock` (ganti lock tabel + dump resmi Turso) dan sediakan **embedded replica** agar dashboard tidak mati saat Turso/internet down.
+
+**Satu hal yang tidak bisa dikompromikan:** target DR sebaiknya **memakai domain yang sama** (cukup re-point DNS). Ganti domain baru ⇒ URL absolut yang tersimpan **di dalam data app** (mis. `CHEVERETO_HOSTNAME`, `siteurl` WordPress, callback payment/webhook) ikut rusak dan tidak bisa diperbaiki generik oleh control plane.
+
+---
+
+Kalau Anda setuju arahnya, saya bisa lanjut ke salah satu: **(1)** implementasi P0-a + bundle `cli/dr.php export` (V2–V3), **(2)** rancangan detail `cli/dr.php restore` beserta urutan volume/port/SSL + test, atau **(3)** dokumen keputusan (SPECS §8l) yang membandingkan tegas "restic vault" vs "Turso" agar tidak diimplementasikan dua kali.

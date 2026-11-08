@@ -1431,24 +1431,6 @@
     {
       "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
       "info": {
-        "id": "ollama/gemma3:latest",
-        "displayName": "ollama/gemma3:latest"
-      },
-      "configuredModelId": "e47537a6-3e42-445d-985a-873ac7c084f9",
-      "configuredAt": 1794090370084
-    },
-    {
-      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
-      "info": {
-        "id": "ollama/phi3:mini",
-        "displayName": "ollama/phi3:mini"
-      },
-      "configuredModelId": "54f5f83f-e22e-45da-a784-b58a08d0bdac",
-      "configuredAt": 1794090370085
-    },
-    {
-      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
-      "info": {
         "id": "opencode/iceman-free",
         "displayName": "opencode/Iceman Free"
       },
@@ -1472,6 +1454,24 @@
       },
       "configuredModelId": "7631a36b-f463-4551-8b41-fb274bec4bda",
       "configuredAt": 1794090370086
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "ollama/gemma3:latest",
+        "displayName": "ollama/gemma3:latest"
+      },
+      "configuredModelId": "209ca9e9-32d6-4fcf-bbc8-dfcfa835da44",
+      "configuredAt": 1794105379813
+    },
+    {
+      "providerId": "aaa613a9-1109-4ec7-85a0-5f0935e1ee4d",
+      "info": {
+        "id": "ollama/phi3:mini",
+        "displayName": "ollama/phi3:mini"
+      },
+      "configuredModelId": "9e7a87c0-d3bb-423e-8ab1-9e3ab2079123",
+      "configuredAt": 1794105379814
     }
   ],
   "backends": {
