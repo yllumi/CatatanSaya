@@ -91,8 +91,7 @@
               "title": "Disaster Recovery Rames"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -255,8 +254,10 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "5cae1209bd9ce7a5",
+  "active": "47e9a256e9c9dce9",
   "lastOpenFiles": [
+    "Disaster Recovery Rames.md",
+    "Bootcamp dengan bahan belajar dari kelas2 CP tapi dengan pendampingan.md",
     "Buku How to Draw Chibi ala Honhon/BAB 1 - Mengenal Style Chibi Diri Sendiri.md",
     "Pemuda/Analisis Rancangan Aplikasi AnaOnline Mobile.md",
     "Pemuda/Rancangan Sistem Herregistrasi Anggota.md",
@@ -275,7 +276,6 @@
     "Skill Penting dalam Hidup.md",
     "Untitled.md",
     "Siap.md",
-    "Bootcamp dengan bahan belajar dari kelas2 CP tapi dengan pendampingan.md",
     "Selamat datang.md",
     "Artikel - Pengembangan Sistem Pembinaan Kader yang Adaptif, Terukur, dan Berkelanjutan di Pemuda Persis.md",
     "gitsync.sh"
